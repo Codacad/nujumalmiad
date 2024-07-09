@@ -1,0 +1,5 @@
+.showcase-swiper .swiper-button-prev::after,
+.showcase-swiper .swiper-button-next::after {
+  color: white;
+  font-size: 18px;
+}

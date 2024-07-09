@@ -1,0 +1,18 @@
+.showcase-swiper .swiper-pagination-bullet{
+    background-color: #fff;
+    width: 10px;
+    height: 4px;
+    border-radius: 1px;
+  }
+  .showcase-swiper .swiper-pagination-bullet-active{
+    background-color: #da880a;
+    width: 30px;
+    height: 5px;
+  }
+  
+  .showcase-swiper .swiper-pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
