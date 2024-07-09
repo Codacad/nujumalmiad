@@ -2,7 +2,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { useState, useEffect } from "react";
 import { whychooseus } from "../state/whyschooseus";
-
+import { Pagination } from "swiper/modules";
+import '../css/pagination.css'
 const WhyChooseUs = () => {
   const [windowWidth, setWindowWidth] = useState({
     width: window.innerWidth,
@@ -13,20 +14,19 @@ const WhyChooseUs = () => {
         width: window.innerWidth,
       });
     };
-
     window.addEventListener("resize", handleResize);
-
-    // Cleanup event listener on component unmount
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   return (
     <>
       <section className="why-choose-us">
         <div className="container bg-gray-50 md:p-8 p-2 flex flex-col">
-          <h2 className="text-center mb-6 text-4xl font-bold text-gray-500">
+          <h2 className="text-center mb-6 md:text-4xl text-2xl max-md:mt-4 font-bold text-gray-500">
             Why Choose Us
           </h2>
           <Swiper
+            modules={[Pagination]}
+            pagination={{ clickable: true }}
             slidesPerView={
               windowWidth.width >= 1280
                 ? 4
@@ -37,7 +37,7 @@ const WhyChooseUs = () => {
                 : 1
             }
             spaceBetween={10}
-            className="md:w-[80%] grid grid-cols-2"
+            className="whychooseus md:w-[80%] grid grid-cols-2"
           >
             {whychooseus.map((slide) => {
               return (

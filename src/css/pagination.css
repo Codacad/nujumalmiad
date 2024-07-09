@@ -16,3 +16,10 @@
     justify-content: center;
     margin-bottom: 20px;
   }
+
+  .whychooseus .swiper-pagination-bullet-active{
+    background-color: #da880a;
+  }
+  .whychooseus .swiper-pagination{
+    position: absolute;
+  }
