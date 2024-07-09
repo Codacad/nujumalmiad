@@ -8,6 +8,7 @@ import "../css/navigation.css";
 import "../css/pagination.css";
 import { Autoplay, EffectFade, Pagination, Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
+import WhyChooseUs from "../components/WhyChooseUs";
 
 const Home = () => {
   const [windowWidth, setWindowWidth] = useState({
@@ -45,68 +46,6 @@ const Home = () => {
       >
         <SwiperSlide>
           <div className="slide relative">
-            <div className="image -z-10 bg-[url('/images/showcase-slider/mm.jpg')] absolute w-full bg-cover bg-center bg-no-repeat md:h-[80vh] h-[60vh] object-center">
-              <div className="w-full h-full bg-[rgba(0,0,0,.5)]"></div>
-            </div>
-            <div className="content lg:px-16 md:px-10 px-4 w-full z-10 md:h-[80vh] h-[60vh] flex gap-4 flex-col justify-center max-md:text-center items-center">
-              <h2 className="text-white xl:text-6xl font-bold md:text-4xl text-2xl">
-                Expert Mechanical Maintenance
-              </h2>
-              <p className="text-white md:w-[50%] md:text-xl">
-                Ensure your machinery runs smoothly with our comprehensive
-                mechanical maintenance services. Experience minimal downtime and
-                maximum efficiency.
-              </p>
-              <div className="buttons flex gap-2">
-                <Link
-                  to={"#"}
-                  className="bg-primary rounded-md shadow-md text-sm text-white px-3 py-2"
-                >
-                  Learn More
-                </Link>
-                <Link
-                  to={"#"}
-                  className="bg-white rounded-md shadow-md text-black px-3 py-2"
-                >
-                  Contact Us
-                </Link>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slide relative">
-            <div className="image -z-10 bg-[url('/images/showcase-slider/em.jpg')] absolute w-full bg-cover bg-center bg-no-repeat md:h-[80vh] h-[60vh] object-center">
-              <div className="w-full h-full bg-[rgba(0,0,0,.5)]"></div>
-            </div>
-            <div className="content lg:px-16 md:px-10 px-4 w-full z-10 md:h-[80vh] h-[60vh] flex gap-4 flex-col justify-center max-md:text-center items-center">
-              <h2 className="text-white xl:text-6xl font-bold md:text-4xl text-2xl">
-                Reliable Electrical Maintenance
-              </h2>
-              <p className="text-white md:w-[50%] md:text-xl">
-                Keep your electrical systems safe and efficient with our
-                top-notch electrical maintenance solutions. Trust our expertise
-                for uninterrupted operations.
-              </p>
-              <div className="buttons flex gap-2">
-                <Link
-                  to={"#"}
-                  className="bg-primary rounded-md shadow-md text-sm text-white px-3 py-2"
-                >
-                  Learn More
-                </Link>
-                <Link
-                  to={"#"}
-                  className="bg-white rounded-md shadow-md text-black px-3 py-2"
-                >
-                  Contact Us
-                </Link>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="slide relative">
             <div className="image -z-10 bg-[url('/images/showcase-slider/cos.jpg')] absolute w-full bg-cover bg-center bg-no-repeat md:h-[80vh] h-[60vh] object-center">
               <div className="w-full h-full bg-[rgba(0,0,0,.5)]"></div>
             </div>
@@ -122,13 +61,13 @@ const Home = () => {
               <div className="buttons flex gap-2">
                 <Link
                   to={"#"}
-                  className="bg-primary rounded-md shadow-md text-sm text-white px-3 py-2"
+                  className="bg-primary transition-all duration-100 ease-linear hover:bg-transparent hover:ring-1 hover:ring-primary hover:text-primary rounded-md shadow-md text-sm text-white px-3 py-2"
                 >
                   Learn More
                 </Link>
                 <Link
                   to={"#"}
-                  className="bg-white rounded-md shadow-md text-black px-3 py-2"
+                  className="bg-white hover:bg-transparent transition-all duration-100 ease-linear hover:ring-1 ring-white hover:text-white rounded-md shadow-md text-black px-3 py-2"
                 >
                   Contact Us
                 </Link>
@@ -153,13 +92,13 @@ const Home = () => {
               <div className="buttons flex gap-2">
                 <Link
                   to={"#"}
-                  className="bg-primary rounded-md shadow-md text-sm text-white px-3 py-2"
+                  className="bg-primary transition-all duration-100 ease-linear hover:bg-transparent hover:ring-1 hover:ring-primary hover:text-primary rounded-md shadow-md text-sm text-white px-3 py-2"
                 >
                   Learn More
                 </Link>
                 <Link
                   to={"#"}
-                  className="bg-white rounded-md shadow-md text-black px-3 py-2"
+                  className="bg-white hover:bg-transparent transition-all duration-100 ease-linear hover:ring-1 ring-white hover:text-white rounded-md shadow-md text-black px-3 py-2"
                 >
                   Contact Us
                 </Link>
@@ -174,23 +113,85 @@ const Home = () => {
             </div>
             <div className="content lg:px-16 md:px-10 px-4 w-full z-10 md:h-[80vh] h-[60vh] flex gap-4 flex-col justify-center max-md:text-center items-center">
               <h2 className="text-white xl:text-6xl font-bold md:text-4xl text-2xl">
-                Comprehensive Facility Management
+                Civil Construction Maintenance
               </h2>
               <p className="text-white md:w-[50%] md:text-xl">
-                Enhance your facility’s performance with our tailored management
-                services. Efficient, effective, and customized to your needs. of
-                the way.
+                Enhance your construction projects' performance with our
+                tailored maintenance services. Efficient, effective, and
+                customized to your needs.
               </p>
               <div className="buttons flex gap-2">
                 <Link
                   to={"#"}
-                  className="bg-primary rounded-md shadow-md text-sm text-white px-3 py-2"
+                  className="bg-primary transition-all duration-100 ease-linear hover:bg-transparent hover:ring-1 hover:ring-primary hover:text-primary rounded-md shadow-md text-sm text-white px-3 py-2"
                 >
                   Learn More
                 </Link>
                 <Link
                   to={"#"}
-                  className="bg-white rounded-md shadow-md text-black px-3 py-2"
+                  className="bg-white hover:bg-transparent transition-all duration-100 ease-linear hover:ring-1 ring-white hover:text-white rounded-md shadow-md text-black px-3 py-2"
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="slide relative">
+            <div className="image -z-10 bg-[url('/images/showcase-slider/mm.jpg')] absolute w-full bg-cover bg-center bg-no-repeat md:h-[80vh] h-[60vh] object-center">
+              <div className="w-full h-full bg-[rgba(0,0,0,.5)]"></div>
+            </div>
+            <div className="content lg:px-16 md:px-10 px-4 w-full z-10 md:h-[80vh] h-[60vh] flex gap-4 flex-col justify-center max-md:text-center items-center">
+              <h2 className="text-white xl:text-6xl font-bold md:text-4xl text-2xl">
+                Expert Mechanical Maintenance
+              </h2>
+              <p className="text-white md:w-[50%] md:text-xl">
+                Ensure your machinery runs smoothly with our comprehensive
+                mechanical maintenance services. Experience minimal downtime and
+                maximum efficiency.
+              </p>
+              <div className="buttons flex gap-2">
+                <Link
+                  to={"#"}
+                  className="bg-primary transition-all duration-100 ease-linear hover:bg-transparent hover:ring-1 hover:ring-primary hover:text-primary rounded-md shadow-md text-sm text-white px-3 py-2"
+                >
+                  Learn More
+                </Link>
+                <Link
+                  to={"#"}
+                  className="bg-white hover:bg-transparent transition-all duration-100 ease-linear hover:ring-1 ring-white hover:text-white rounded-md shadow-md text-black px-3 py-2"
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="slide relative">
+            <div className="image -z-10 bg-[url('/images/showcase-slider/em.jpg')] absolute w-full bg-cover bg-center bg-no-repeat md:h-[80vh] h-[60vh] object-center">
+              <div className="w-full h-full bg-[rgba(0,0,0,.5)]"></div>
+            </div>
+            <div className="content lg:px-16 md:px-10 px-4 w-full z-10 md:h-[80vh] h-[60vh] flex gap-4 flex-col justify-center max-md:text-center items-center">
+              <h2 className="text-white xl:text-6xl font-bold md:text-4xl text-2xl">
+                Reliable Electrical Maintenance
+              </h2>
+              <p className="text-white md:w-[50%] md:text-xl">
+                Keep your electrical systems safe and efficient with our
+                top-notch electrical maintenance solutions. Trust our expertise
+                for uninterrupted operations.
+              </p>
+              <div className="buttons flex gap-2">
+                <Link
+                  to={"#"}
+                  className="bg-primary transition-all duration-100 ease-linear hover:bg-transparent hover:ring-1 hover:ring-primary hover:text-primary rounded-md shadow-md text-sm text-white px-3 py-2"
+                >
+                  Learn More
+                </Link>
+                <Link
+                  to={"#"}
+                  className="bg-white hover:bg-transparent transition-all duration-100 ease-linear hover:ring-1 ring-white hover:text-white rounded-md shadow-md text-black px-3 py-2"
                 >
                   Contact Us
                 </Link>
@@ -199,6 +200,7 @@ const Home = () => {
           </div>
         </SwiperSlide>
       </Swiper>
+      <WhyChooseUs />
     </>
   );
 };

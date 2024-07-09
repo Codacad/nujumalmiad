@@ -5,7 +5,7 @@ import { RiMenu3Line } from "react-icons/ri";
 const Navbar = () => {
   return (
     <>
-      <nav className="flex gap-4 bg-gradient-to-r from-blue-50 to-cyan-100 items-center md:px-8 px-2">
+      <nav className="flex gap-4 font-montserrat bg-gradient-to-r from-blue-50 to-cyan-100 items-center md:px-8 px-2">
         <h1 className="logo">
           <Link to={"/"}>
             <img src={Logo} alt="" />
@@ -14,6 +14,9 @@ const Navbar = () => {
         <ul className="text-gray-700 hidden md:flex gap-4 ml-6">
           <li>
             <Link to={"/"}>Home</Link>
+          </li>
+          <li>
+            <Link to={"/services"}>Services</Link>
           </li>
           <li>
             <Link to={"/about"}>About</Link>
@@ -31,7 +34,7 @@ const Navbar = () => {
             <FaLinkedin size={20} />
           </span>
         </div>
-        <button className="ml-auto w-[120px] hidden md:block bg-primary p-2 rounded-md shadow-md text-white">
+        <button className="ml-auto w-[120px] hidden md:block bg-primary p-1 rounded-md shadow-md text-white">
           Get Quotation
         </button>
         <div className="hamburger block md:hidden ml-auto">
