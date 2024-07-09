@@ -16,10 +16,26 @@
     justify-content: center;
     margin-bottom: 20px;
   }
-
+  .whychooseus .swiper-pagination-bullet{
+    background-color: #da880a;
+    width: 10px;
+    height: 10px;
+  }
   .whychooseus .swiper-pagination-bullet-active{
     background-color: #da880a;
+    width: 10px;
+    height: 10px;
+  }
+  .whychooseus{
+    position: relative;
+    z-index: 0;
   }
   .whychooseus .swiper-pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
     position: absolute;
+    bottom: 0px;
+    z-index: 20;
   }
