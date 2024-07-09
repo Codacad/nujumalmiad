@@ -41,14 +41,14 @@ const Home = () => {
         navigation={windowWidth.width >= 768 ? true : false}
         effect={"fade"}
         modules={[Autoplay, EffectFade, Pagination, Navigation]}
-        className="mySwiper showcase-swiper h-[80vh]"
+        className="mySwiper showcase-swiper md:h-[80vh] h-[70vh]"
       >
         <SwiperSlide>
           <div className="slide relative">
-            <div className="image -z-10 bg-[url('/images/showcase-slider/mm.jpg')] absolute w-full bg-cover bg-center bg-no-repeat h-[80vh] object-center">
+            <div className="image -z-10 bg-[url('/images/showcase-slider/mm.jpg')] absolute w-full bg-cover bg-center bg-no-repeat md:h-[80vh] h-[70vh] object-center">
               <div className="w-full h-full bg-[rgba(0,0,0,.5)]"></div>
             </div>
-            <div className="content lg:px-16 md:px-10 px-4 w-full z-10 h-[80vh] flex gap-4 flex-col justify-center max-md:text-center items-center">
+            <div className="content lg:px-16 md:px-10 px-4 w-full z-10 md:h-[80vh] h-[70vh] flex gap-4 flex-col pt-16 max-md:text-center items-center">
               <h2 className="text-white xl:text-6xl font-bold md:text-4xl text-2xl">
                 Expert Mechanical Maintenance
               </h2>
@@ -76,10 +76,10 @@ const Home = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="slide relative">
-            <div className="image -z-10 bg-[url('/images/showcase-slider/em.jpg')] absolute w-full bg-cover bg-center bg-no-repeat h-[80vh] object-center">
+            <div className="image -z-10 bg-[url('/images/showcase-slider/em.jpg')] absolute w-full bg-cover bg-center bg-no-repeat md:h-[80vh] h-[70vh] object-center">
               <div className="w-full h-full bg-[rgba(0,0,0,.5)]"></div>
             </div>
-            <div className="content lg:px-16 md:px-10 px-4 w-full z-10 h-[80vh] flex gap-4 flex-col justify-center max-md:text-center items-center">
+            <div className="content lg:px-16 md:px-10 px-4 w-full z-10 md:h-[80vh] h-[70vh] flex gap-4 flex-col justify-center max-md:text-center items-center">
               <h2 className="text-white xl:text-6xl font-bold md:text-4xl text-2xl">
                 Reliable Electrical Maintenance
               </h2>
@@ -107,10 +107,10 @@ const Home = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="slide relative">
-            <div className="image -z-10 bg-[url('/images/showcase-slider/cos.jpg')] absolute w-full bg-cover bg-center bg-no-repeat h-[80vh] object-center">
+            <div className="image -z-10 bg-[url('/images/showcase-slider/cos.jpg')] absolute w-full bg-cover bg-center bg-no-repeat md:h-[80vh] h-[70vh] object-center">
               <div className="w-full h-full bg-[rgba(0,0,0,.5)]"></div>
             </div>
-            <div className="content lg:px-16 md:px-10 px-4 w-full z-10 h-[80vh] flex gap-4 flex-col justify-center max-md:text-center items-center">
+            <div className="content lg:px-16 md:px-10 px-4 w-full z-10 md:h-[80vh] h-[70vh] flex gap-4 flex-col justify-center max-md:text-center items-center">
               <h2 className="text-white xl:text-6xl font-bold md:text-4xl text-2xl">
                 Professional Contracting Services
               </h2>
@@ -138,10 +138,10 @@ const Home = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="slide relative">
-            <div className="image -z-10 bg-[url('/images/showcase-slider/mp.jpg')] absolute w-full bg-cover bg-center bg-no-repeat h-[80vh] object-center">
+            <div className="image -z-10 bg-[url('/images/showcase-slider/mp.jpg')] absolute w-full bg-cover bg-center bg-no-repeat md:h-[80vh] h-[70vh] object-center">
               <div className="w-full h-full bg-[rgba(0,0,0,.5)]"></div>
             </div>
-            <div className="content lg:px-16 md:px-10 px-4 w-full z-10 h-[80vh] flex gap-4 flex-col justify-center max-md:text-center items-center">
+            <div className="content lg:px-16 md:px-10 px-4 w-full z-10 md:h-[80vh] h-[70vh] flex gap-4 flex-col justify-center max-md:text-center items-center">
               <h2 className="text-white xl:text-6xl font-bold md:text-4xl text-2xl">
                 Skilled & Unskilled Manpower Supply
               </h2>
@@ -169,10 +169,10 @@ const Home = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="slide relative">
-            <div className="image -z-10 bg-[url('/images/showcase-slider/fm.jpg')] absolute w-full bg-cover bg-center bg-no-repeat h-[80vh] object-center">
+            <div className="image -z-10 bg-[url('/images/showcase-slider/fm.jpg')] absolute w-full bg-cover bg-center bg-no-repeat md:h-[80vh] h-[70vh] object-center">
               <div className="w-full h-full bg-[rgba(0,0,0,.5)]"></div>
             </div>
-            <div className="content lg:px-16 md:px-10 px-4 w-full z-10 h-[80vh] flex gap-4 flex-col justify-center max-md:text-center items-center">
+            <div className="content lg:px-16 md:px-10 px-4 w-full z-10 md:h-[80vh] h-[70vh] flex gap-4 flex-col justify-center max-md:text-center items-center">
               <h2 className="text-white xl:text-6xl font-bold md:text-4xl text-2xl">
                 Comprehensive Facility Management
               </h2>
