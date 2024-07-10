@@ -5,6 +5,7 @@ import { whychooseus } from "../state/whyschooseus";
 import { Pagination } from "swiper/modules";
 import { FaCircleCheck } from "react-icons/fa6";
 import "../css/pagination.css";
+import ClientImg from "/images/whychooseus/client.svg";
 const WhyChooseUs = () => {
   const [windowWidth, setWindowWidth] = useState({
     width: window.innerWidth,
@@ -57,70 +58,75 @@ const WhyChooseUs = () => {
               );
             })}
           </Swiper>
-          <div className="benefits relative z-0 flex flex-col gap-4 md:w-[80%] mx-auto py-4 my-8">
-            <h3 className="text-3xl text-gray-800 font-bold">
-              Benefits to Clients
-            </h3>
-            <ul className="flex flex-col gap-4 text-xl">
-              <li className="flex items-center gap-2">
-                <span>
-                  <FaCircleCheck className="text-primary" />
-                </span>
-                <span>
-                  Single-point accountability for streamlined project
-                  management.
-                </span>
-              </li>
-              <li className="flex items-center gap-2">
-                <span>
-                  <FaCircleCheck className="text-primary" />
-                </span>
-                <span>
-                  Cost efficiency through optimized resource management.
-                </span>
-              </li>
-              <li className="flex items-center gap-2">
-                <span>
-                  <FaCircleCheck className="text-primary" />
-                </span>
-                <span>
-                  Reliable support from project inception to completion.
-                </span>
-              </li>
-              <li className="flex items-center gap-2">
-                <span>
-                  <FaCircleCheck className="text-primary" />
-                </span>
-                <span>
-                  Commitment to safety and adherence to industry standards.
-                </span>
-              </li>
-              <li className="flex items-center gap-2">
-                <span>
-                  <FaCircleCheck className="text-primary" />
-                </span>
-                <span>
-                  Access to skilled manpower with specialized expertise.
-                </span>
-              </li>
-              <li className="flex items-center gap-2">
-                <span>
-                  <FaCircleCheck className="text-primary" />
-                </span>
-                <span>
-                  Enhanced project outcomes through tailored maintenance
-                  programs.
-                </span>
-              </li>
-              <li className="flex items-center gap-2">
-                <span>
-                  <FaCircleCheck className="text-primary" />
-                </span>
-                <span>
-                  Minimized downtime and increased operational efficiency.
-                </span>
-              </li>
-            </ul>
+          <div className="benefits relative z-0 flex flex-col gap-4 md:w-[80%] mx-auto py-4 max-md:p-4 my-8">
+            <div className="content md:grid grid-cols-2 flex flex-col gap-4">
+              <ul className="flex flex-col gap-4 justify-center md:text-md text-sm font-montserrat">
+                <h3 className="text-3xl text-gray-800 font-bold mb-4">
+                  Benefits to Clients
+                </h3>
+                <li className="flex items-center gap-2">
+                  <span>
+                    <FaCircleCheck className="text-primary" />
+                  </span>
+                  <span>
+                    Single-point accountability for streamlined project
+                    management.
+                  </span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span>
+                    <FaCircleCheck className="text-primary" />
+                  </span>
+                  <span>
+                    Cost efficiency through optimized resource management.
+                  </span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span>
+                    <FaCircleCheck className="text-primary" />
+                  </span>
+                  <span>
+                    Reliable support from project inception to completion.
+                  </span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span>
+                    <FaCircleCheck className="text-primary" />
+                  </span>
+                  <span>
+                    Commitment to safety and adherence to industry standards.
+                  </span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span>
+                    <FaCircleCheck className="text-primary" />
+                  </span>
+                  <span>
+                    Access to skilled manpower with specialized expertise.
+                  </span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span>
+                    <FaCircleCheck className="text-primary" />
+                  </span>
+                  <span>
+                    Enhanced project outcomes through tailored maintenance
+                    programs.
+                  </span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <span>
+                    <FaCircleCheck className="text-primary" />
+                  </span>
+                  <span>
+                    Minimized downtime and increased operational efficiency.
+                  </span>
+                </li>
+              </ul>
+              <div className="client-image flex justify-center max-md:order-1">
+                <img className="md:w-[80%]" src={ClientImg} alt="" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
