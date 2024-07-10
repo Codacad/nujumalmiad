@@ -32,10 +32,10 @@ const Home = () => {
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
-        // autoplay={{
-        //   delay: 5000,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
         pagination={{
           clickable: true,
         }}
@@ -53,7 +53,7 @@ const Home = () => {
               <h2 className="text-white xl:text-6xl font-bold md:text-4xl text-2xl">
                 Professional Contracting Services
               </h2>
-              <p className="text-white md:w-[50%] md:text-xl">
+              <p className="text-white md:w-[50%] md:text-xl text-center">
                 From project planning to execution, our contracting services
                 cover all your needs. Delivering quality and reliability every
                 step of the way.
@@ -84,7 +84,7 @@ const Home = () => {
               <h2 className="text-white xl:text-6xl font-bold md:text-4xl text-2xl">
                 Skilled & Unskilled Manpower Supply
               </h2>
-              <p className="text-white md:w-[50%] md:text-xl">
+              <p className="text-white md:w-[50%] md:text-xl text-center">
                 Access a diverse pool of skilled professionals to meet your
                 workforce demands. Reliable and ready to contribute to your
                 success.
@@ -108,14 +108,14 @@ const Home = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="slide relative">
-            <div className="image -z-10 bg-[url('/images/showcase-slider/fm.jpg')] absolute w-full bg-cover bg-center bg-no-repeat md:h-[80vh] h-[60vh] object-center">
+            <div className="image -z-10 bg-[url('/images/showcase-slider/cc.jpg')] absolute w-full bg-cover bg-center bg-no-repeat md:h-[80vh] h-[60vh] object-center">
               <div className="w-full h-full bg-[rgba(0,0,0,.5)]"></div>
             </div>
             <div className="content lg:px-16 md:px-10 px-4 w-full z-10 md:h-[80vh] h-[60vh] flex gap-4 flex-col justify-center max-md:text-center items-center">
               <h2 className="text-white xl:text-6xl font-bold md:text-4xl text-2xl">
                 Civil Construction Maintenance
               </h2>
-              <p className="text-white md:w-[50%] md:text-xl">
+              <p className="text-white md:w-[50%] md:text-xl text-center">
                 Enhance your construction projects' performance with our
                 tailored maintenance services. Efficient, effective, and
                 customized to your needs.
@@ -146,7 +146,7 @@ const Home = () => {
               <h2 className="text-white xl:text-6xl font-bold md:text-4xl text-2xl">
                 Expert Mechanical Maintenance
               </h2>
-              <p className="text-white md:w-[50%] md:text-xl">
+              <p className="text-white md:w-[50%] md:text-xl text-center">
                 Ensure your machinery runs smoothly with our comprehensive
                 mechanical maintenance services. Experience minimal downtime and
                 maximum efficiency.
@@ -177,7 +177,7 @@ const Home = () => {
               <h2 className="text-white xl:text-6xl font-bold md:text-4xl text-2xl">
                 Reliable Electrical Maintenance
               </h2>
-              <p className="text-white md:w-[50%] md:text-xl">
+              <p className="text-white md:w-[50%] md:text-xl text-center">
                 Keep your electrical systems safe and efficient with our
                 top-notch electrical maintenance solutions. Trust our expertise
                 for uninterrupted operations.

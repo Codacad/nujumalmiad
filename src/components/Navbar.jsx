@@ -1,8 +1,16 @@
 import { Link } from "react-router-dom";
 import Logo from "/images/Logo200x70.svg";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
+import { setToggle } from "../state/slices/sidenavSlice";
+import { useDispatch, useSelector } from "react-redux";
 import { RiMenu3Line } from "react-icons/ri";
 const Navbar = () => {
+  const { toggle } = useSelector((state) => state.sidenav);
+  const dispatch = useDispatch();
+  const handleSidenavTogle = () => {
+    dispatch(setToggle());
+    console.log(toggle);
+  };
   return (
     <>
       <nav className="flex gap-4 font-montserrat bg-gradient-to-r from-blue-50 to-cyan-100 items-center md:px-8 px-2">
@@ -37,8 +45,8 @@ const Navbar = () => {
         <button className="ml-auto w-[120px] hidden md:block bg-primary p-1 rounded-md shadow-md text-white">
           Get Quotation
         </button>
-        <div className="hamburger block md:hidden ml-auto">
-          <span>
+        <div className="hamburger block">
+          <span onClick={handleSidenavTogle} className="cursor-pointer">
             <RiMenu3Line size={20} className="text-primary font-bold" />
           </span>
         </div>
