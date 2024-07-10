@@ -21,7 +21,7 @@ const WhyChooseUs = () => {
     <>
       <section className="why-choose-us">
         <div className="container bg-gray-50 md:p-8 p-2 flex flex-col">
-          <h2 className="text-center mb-6 md:text-4xl text-2xl max-md:mt-4 font-bold text-gray-500">
+          <h2 className="text-center mb-6 md:text-4xl text-2xl max-md:mt-4 font-bold text-gray-800">
             Why Choose Us
           </h2>
           <Swiper
