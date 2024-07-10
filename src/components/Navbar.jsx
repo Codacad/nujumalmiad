@@ -45,7 +45,7 @@ const Navbar = () => {
         <button className="ml-auto w-[120px] hidden md:block bg-primary p-1 rounded-md shadow-md text-white">
           Get Quotation
         </button>
-        <div className="hamburger block">
+        <div className="hamburger block max-md:ml-auto">
           <span onClick={handleSidenavTogle} className="cursor-pointer">
             <RiMenu3Line size={20} className="text-primary font-bold" />
           </span>
