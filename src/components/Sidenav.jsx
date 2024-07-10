@@ -16,10 +16,10 @@ const Sidenav = () => {
     <>
       <div
         className={`sidenav fixed top-0 ${
-          !toggle ? "-right-[100%] transition-opacity duration-500 ease-linear" : "right-0 transition-opacity duration-500 ease-linear"
+          !toggle ? "-right-[100%] transition-opacity duration-200 ease-linear" : "right-0 transition-opacity duration-500 ease-linear"
         } w-full min-h-screen z-20 bg-[rgba(0,0,0,.5)]`}
       >
-        <nav className={`w-[400px] min-h-full transition-all duration-200 p-4 bg-gradient-to-r from-blue-50 to-cyan-100 absolute right-0 top-0`}>
+        <nav className={`w-[400px] min-h-full p-4 bg-gradient-to-r from-blue-50 to-cyan-100 absolute right-0 top-0`}>
           <header className="flex justify-between items-start border-b border-b-gray-200">
             <Link to={"/"}>
               <img src={Logo} alt="Logo" />

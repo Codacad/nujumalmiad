@@ -9,6 +9,7 @@ import "../css/pagination.css";
 import { Autoplay, EffectFade, Pagination, Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
 import WhyChooseUs from "../components/WhyChooseUs";
+import Services from "../components/Services";
 
 const Home = () => {
   const [windowWidth, setWindowWidth] = useState({
@@ -200,6 +201,7 @@ const Home = () => {
           </div>
         </SwiperSlide>
       </Swiper>
+      <Services />
       <WhyChooseUs />
     </>
   );
