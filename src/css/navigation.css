@@ -3,3 +3,18 @@
   color: white;
   font-size: 18px;
 }
+
+.swiper {
+  position: relative;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+}
+.swiper-button-next {
+  position: absolute;
+  bottom: -50%;
+  right: 0;
+}

@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import services from "../state/services";
 import { FaArrowRight } from "react-icons/fa6";
-
+import "../css/navigation.css";
 const Services = () => {
   const [windowWidth, setWindowWidth] = useState({
     width: window.innerWidth,
@@ -41,7 +41,7 @@ const Services = () => {
               : 1
           }
           navigation={true}
-          className="services flex md:w-[80%] p-4 w-full"
+          className="services flex md:w-[80%] p-4 w-full relative"
           spaceBetween={30}
         >
           {services.map((service, index) => {

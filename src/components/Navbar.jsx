@@ -42,12 +42,12 @@ const Navbar = () => {
             <FaLinkedin size={20} />
           </span>
         </div>
-        <button className="ml-auto w-[120px] hidden md:block bg-primary p-1 rounded-md shadow-md text-white">
-          Get Quotation
+        <button className="ml-auto w-[130px] hidden md:block text-sm bg-black p-2 rounded-md shadow-md text-white">
+          Request Quote
         </button>
         <div className="hamburger block max-md:ml-auto">
           <span onClick={handleSidenavTogle} className="cursor-pointer">
-            <RiMenu3Line size={20} className="text-primary font-bold" />
+            <RiMenu3Line size={20} className="text-black font-bold" />
           </span>
         </div>
       </nav>
