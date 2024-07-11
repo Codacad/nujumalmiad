@@ -10,9 +10,9 @@ const ServiceOverview = () => {
   return (
     <>
       <div className="service-overview">
-        <header className="md:min-h-[50vh] h-auto relative flex justify-center items-center">
+        <header className="md:min-h-[50vh] h-[40vh] relative flex justify-center items-center">
           <div
-            className={`-z-10 bg-[url('${service?.image}')] absolute w-full bg-cover bg-center bg-no-repeat md:h-[50vh] h-auto object-center`}
+            className={`-z-10 bg-[url('${service?.image}')] absolute w-full bg-cover bg-center bg-no-repeat md:h-[50vh] h-[40vh] object-center`}
           >
             <div className="w-full h-full bg-[rgba(0,0,0,.7)]"></div>
           </div>
