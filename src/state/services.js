@@ -3,6 +3,7 @@ const services = [
   {
     id: uuidv4(),
     name: "Contracting Services",
+    image: "/images/showcase-slider/cos.jpg",
     short_description:
       "Offering top-notch professional contracting services for all your project needs.",
     details: [
@@ -17,6 +18,7 @@ const services = [
   {
     id: uuidv4(),
     name: "Manpower Supply",
+    image: "/images/showcase-slider/mp.jpg",
     short_description:
       "Providing skilled and unskilled manpower to meet your labor needs.",
     details: [
@@ -31,6 +33,7 @@ const services = [
   {
     id: uuidv4(),
     name: "Civil Construction & Maintenance",
+    image: "/images/showcase-slider/cc.jpg",
     short_description:
       "Expert civil construction and maintenance services for your infrastructure projects.",
     details: [
@@ -45,6 +48,7 @@ const services = [
   {
     id: uuidv4(),
     name: "Mechanical Maintenance",
+    image: "/images/showcase-slider/mm.jpg",
     short_description:
       "Reliable mechanical maintenance services to keep your machinery running smoothly.",
     details: [
@@ -59,6 +63,7 @@ const services = [
   {
     id: uuidv4(),
     name: "Electrical Maintenance",
+    image: "/images/showcase-slider/em.jpg",
     short_description:
       "Dependable electrical maintenance services for safe and efficient electrical systems.",
     details: [
@@ -72,4 +77,4 @@ const services = [
   },
 ];
 
-export default services
+export default services;

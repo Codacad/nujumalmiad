@@ -41,11 +41,11 @@ const WhyChooseUs = () => {
             }
             spaceBetween={10}
             autoplay={true}
-            className="whychooseus pb-8 md:w-[80%] grid grid-cols-2 mb-8 max-md:px-2"
+            className="whychooseus pb-8 md:w-[80%] grid grid-cols-2 mb-8 max-md:px-4"
           >
             {whychooseus.map((slide) => {
               return (
-                <SwiperSlide key={slide.id} className="min-h-[400px] bg-white">
+                <SwiperSlide key={slide.id} className="min-h-[400px] bg-white shadow-sm">
                   <div className="point p-2 flex gap-4 flex-col text-center min-h-[400px] justify-center items-center">
                     <div className="img w-32 h-32">
                       <img className="" src={slide.imgPath} alt="" />
