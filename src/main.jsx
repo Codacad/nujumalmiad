@@ -8,6 +8,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import store from "./state/store.js";
 import { Provider } from "react-redux";
+import ServiceOverview from "./components/ServiceOverview.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/contact", element: <Contact /> },
       { path: "/about", element: <About /> },
+      { path: "/services/:name", element: <ServiceOverview /> },
     ],
   },
 ]);

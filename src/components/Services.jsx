@@ -72,7 +72,8 @@ const Services = () => {
                   </div>
                   <Link
                     className="group text-gray-700 mt-4 transition-all duration-150 ease-linear hover:underline hover:gap-3 rounded-md w-32 flex gap-2 items-center"
-                    to={"#"}
+                    to={`/services/${service.name}`}
+                    
                   >
                     <span className="hover:opacity-80 transition-all duration-150">
                       Read More
