@@ -22,7 +22,7 @@ const Services = () => {
   }, []);
   return (
     <>
-      <div className="container font-montserrat min-h-[100vh] bg-gradient-to-r from-gray-100 to-gray-50 w-full flex flex-col items-center justify-center">
+      <div className="container font-montserrat md:min-h-[100vh] max-md:py-4 bg-gradient-to-r from-gray-100 to-gray-50 w-full flex flex-col items-center justify-center">
         <header className="md:w-[80%] w-full px-4">
           <h4 className="text-primary md:mb-4 mb-2 text-xl">Services</h4>
           <h1 className="text-gray-800 md:text-4xl text-2xl md:mb-4 mb-2 md font-bold">
