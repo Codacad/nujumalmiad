@@ -9,6 +9,9 @@ export default {
       fontFamily: {
         montserrat: ['"Montserrat"', "sans-serif"],
       },
+      boxShadow: {
+        primaryShadow: '0px 3px 0px #da880a'
+      },
     },
   },
   plugins: [],

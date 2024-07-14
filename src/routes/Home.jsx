@@ -67,7 +67,7 @@ const Home = () => {
                   Learn More
                 </Link>
                 <Link
-                  to={"#"}
+                  to={"/contact"}
                   className="bg-white hover:bg-transparent transition-all duration-100 ease-linear hover:ring-1 ring-white hover:text-white rounded-md shadow-md text-black px-3 py-2"
                 >
                   Contact Us
@@ -98,7 +98,7 @@ const Home = () => {
                   Learn More
                 </Link>
                 <Link
-                  to={"#"}
+                  to={"/contact"}
                   className="bg-white hover:bg-transparent transition-all duration-100 ease-linear hover:ring-1 ring-white hover:text-white rounded-md shadow-md text-black px-3 py-2"
                 >
                   Contact Us
@@ -129,7 +129,7 @@ const Home = () => {
                   Learn More
                 </Link>
                 <Link
-                  to={"#"}
+                  to={"/contact"}
                   className="bg-white hover:bg-transparent transition-all duration-100 ease-linear hover:ring-1 ring-white hover:text-white rounded-md shadow-md text-black px-3 py-2"
                 >
                   Contact Us
@@ -160,7 +160,7 @@ const Home = () => {
                   Learn More
                 </Link>
                 <Link
-                  to={"#"}
+                  to={"/contact"}
                   className="bg-white hover:bg-transparent transition-all duration-100 ease-linear hover:ring-1 ring-white hover:text-white rounded-md shadow-md text-black px-3 py-2"
                 >
                   Contact Us
@@ -191,7 +191,7 @@ const Home = () => {
                   Learn More
                 </Link>
                 <Link
-                  to={"#"}
+                  to={"/contact"}
                   className="bg-white hover:bg-transparent transition-all duration-100 ease-linear hover:ring-1 ring-white hover:text-white rounded-md shadow-md text-black px-3 py-2"
                 >
                   Contact Us
