@@ -32,7 +32,7 @@ const Contact = () => {
           </div>
         </header>
         <div className="contact flex flex-col justify-center">
-          <div className="contact-information md:my-16 md:w-[80%] mx-auto flex flex-col justify-center items-center">
+          <div className="contact-information md:my-16 md:w-[80%] md:p-6 max-md:py-6 mx-auto flex flex-col justify-center items-center">
             <div className="heading my-8 lg:mb-16">
               <h1 className="md:text-4xl text-3xl font-[500] heading-after">
                 Contact Information
@@ -85,7 +85,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="contact-form md:py-16 flex flex-col items-center bg-white md:p-6 font-montserrat">
+          <div className="contact-form md:py-16 flex flex-col items-center bg-white md:p-6 max-md:py-6 font-montserrat">
             <div className="heading">
               <h1 className="md:text-4xl text-3xl font-[500] text-gray-950 my-8 lg:mb-16 heading-after">
                 Send us a message
