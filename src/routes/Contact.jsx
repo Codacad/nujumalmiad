@@ -39,7 +39,7 @@ const Contact = () => {
               </h1>
             </div>
             <div className="information grid md:grid-cols-3 grid-col-1 justify-center md:gap-6 gap-4 p-4 relative z-0">
-              <div className="mailing-address transition-all duration-150 ease-linear hover:bg-primary group relative shadow-primaryShadow md:p-8 p-4 flex gap-4 flex-col items-center text-center bg-white rounded-3xl">
+              <div className="mailing-address transition-all duration-150 ease-linear hover:bg-black group relative shadow-primaryShadow md:p-8 p-4 flex gap-4 flex-col items-center text-center bg-white rounded-3xl">
                 <span>
                   <MdOutlineAddLocationAlt className="text-gray-950 text-6xl group-hover:text-white" />
                 </span>
@@ -51,7 +51,7 @@ const Contact = () => {
                   Kingdom of Saudi Arabia.
                 </p>
               </div>
-              <div className="email-info relative transition-all duration-150 ease-linear hover:bg-primary group shadow-primaryShadow md:p-8 p-4 flex gap-4 flex-col items-center text-center bg-white rounded-3xl">
+              <div className="email-info relative transition-all duration-150 ease-linear hover:bg-black group shadow-primaryShadow md:p-8 p-4 flex gap-4 flex-col items-center text-center bg-white rounded-3xl">
                 <span>
                   <MdAttachEmail className="text-gray-950 text-6xl group-hover:text-white" />
                 </span>
@@ -67,7 +67,7 @@ const Contact = () => {
                   </Link>
                 </p>
               </div>
-              <div className="phone-number relative group transition-all duration-150 ease-linear hover:bg-primary shadow-primaryShadow md:p-8 p-4 flex gap-4 flex-col items-center text-center bg-white rounded-3xl">
+              <div className="phone-number relative group transition-all duration-150 ease-linear hover:bg-black shadow-primaryShadow md:p-8 p-4 flex gap-4 flex-col items-center text-center bg-white rounded-3xl">
                 <span>
                   <MdOutlinePhoneIphone className="text-gray-950 text-6xl group-hover:text-white" />
                 </span>
@@ -118,7 +118,7 @@ const Contact = () => {
                   placeholder="Message"
                   rows={7}
                 ></textarea>
-                <button className="w-24 bg-primary p-1 text-white rounded-sm">
+                <button className="w-24 bg-gray-950 p-1 text-white rounded-sm">
                   Submit
                 </button>
               </form>
