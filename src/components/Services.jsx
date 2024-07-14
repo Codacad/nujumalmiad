@@ -13,6 +13,9 @@ const Services = () => {
   });
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const [swiperInstance, setSwiperInstance] = useState(null);
+  const [isBeginning, setIsBeginning] = useState(true);
+  const [isEnd, setIsEnd] = useState(false);
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth({
@@ -22,14 +25,23 @@ const Services = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   useEffect(() => {
-    if (prevRef.current && nextRef.current) {
-      const swiper = document.querySelector(".swiper").swiper;
-      swiper.params.navigation.prevEl = prevRef.current;
-      swiper.params.navigation.nextEl = nextRef.current;
-      swiper.navigation.update();
+    if (
+      swiperInstance &&
+      swiperInstance.params &&
+      swiperInstance.params.navigation
+    ) {
+      swiperInstance.params.navigation.prevEl = prevRef.current;
+      swiperInstance.params.navigation.nextEl = nextRef.current;
+      swiperInstance.navigation.update();
+      swiperInstance.on("slideChange", () => {
+        setIsBeginning(swiperInstance.isBeginning);
+        setIsEnd(swiperInstance.isEnd);
+      });
     }
-  }, []);
+  }, [swiperInstance]);
+
   return (
     <>
       <div className="container font-montserrat md:min-h-[100vh] max-md:py-4 bg-gradient-to-r from-gray-100 to-gray-50 w-full flex flex-col items-center justify-center">
@@ -52,6 +64,11 @@ const Services = () => {
           }
           className="services flex md:w-[80%] p-4 w-full relative"
           spaceBetween={30}
+          onSwiper={setSwiperInstance}
+          navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
         >
           {services.map((service, index) => {
             return (
@@ -96,11 +113,19 @@ const Services = () => {
             );
           })}
         </Swiper>
-        <div className="swiper-navigation text-primary font-bold">
-          <button ref={prevRef} className="custom-swiper-prev">
+        <div className="swiper-navigation">
+          <button
+            ref={prevRef}
+            className={`custom-swiper-prev ${isBeginning ? "disabled text-gray-300" : ""}`}
+            disabled={isBeginning}
+          >
             ←
           </button>
-          <button ref={nextRef} className="custom-swiper-next">
+          <button
+            ref={nextRef}
+            className={`custom-swiper-next ${isEnd ? "disabled text-gray-300" : ""}`}
+            disabled={isEnd}
+          >
             →
           </button>
         </div>
