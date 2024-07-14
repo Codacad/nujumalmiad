@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import services from "../state/services";
@@ -52,7 +52,7 @@ const Services = () => {
           </h1>
         </header>
         <Swiper
-          modules={[Navigation]}
+          modules={[Navigation, Autoplay]}
           slidesPerView={
             windowWidth.width >= 1280
               ? 3
@@ -62,6 +62,10 @@ const Services = () => {
               ? 2
               : 1
           }
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
           className="services flex md:w-[80%] p-4 w-full relative"
           spaceBetween={30}
           onSwiper={setSwiperInstance}
@@ -116,14 +120,18 @@ const Services = () => {
         <div className="swiper-navigation">
           <button
             ref={prevRef}
-            className={`custom-swiper-prev ${isBeginning ? "disabled text-gray-300" : ""}`}
+            className={`custom-swiper-prev ${
+              isBeginning ? "disabled text-gray-300" : ""
+            }`}
             disabled={isBeginning}
           >
             ←
           </button>
           <button
             ref={nextRef}
-            className={`custom-swiper-next ${isEnd ? "disabled text-gray-300" : ""}`}
+            className={`custom-swiper-next ${
+              isEnd ? "disabled text-gray-300" : ""
+            }`}
             disabled={isEnd}
           >
             →

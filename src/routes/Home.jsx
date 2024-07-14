@@ -61,7 +61,7 @@ const Home = () => {
               </p>
               <div className="buttons flex gap-2">
                 <Link
-                  to={"#"}
+                  to={"/services/Contracting Services"}
                   className="bg-primary transition-all duration-100 ease-linear hover:bg-transparent hover:ring-1 hover:ring-primary hover:text-primary rounded-md shadow-md text-sm text-white px-3 py-2"
                 >
                   Learn More
@@ -92,7 +92,7 @@ const Home = () => {
               </p>
               <div className="buttons flex gap-2">
                 <Link
-                  to={"#"}
+                  to={"/services/Manpower Supply"}
                   className="bg-primary transition-all duration-100 ease-linear hover:bg-transparent hover:ring-1 hover:ring-primary hover:text-primary rounded-md shadow-md text-sm text-white px-3 py-2"
                 >
                   Learn More
@@ -123,7 +123,7 @@ const Home = () => {
               </p>
               <div className="buttons flex gap-2">
                 <Link
-                  to={"#"}
+                  to={"/services/Civil Construction & Maintenance"}
                   className="bg-primary transition-all duration-100 ease-linear hover:bg-transparent hover:ring-1 hover:ring-primary hover:text-primary rounded-md shadow-md text-sm text-white px-3 py-2"
                 >
                   Learn More
@@ -154,7 +154,7 @@ const Home = () => {
               </p>
               <div className="buttons flex gap-2">
                 <Link
-                  to={"#"}
+                  to={"/services/Mechanical Maintenance"}
                   className="bg-primary transition-all duration-100 ease-linear hover:bg-transparent hover:ring-1 hover:ring-primary hover:text-primary rounded-md shadow-md text-sm text-white px-3 py-2"
                 >
                   Learn More
@@ -185,7 +185,7 @@ const Home = () => {
               </p>
               <div className="buttons flex gap-2">
                 <Link
-                  to={"#"}
+                  to={"/services/Electrical Maintenance"}
                   className="bg-primary transition-all duration-100 ease-linear hover:bg-transparent hover:ring-1 hover:ring-primary hover:text-primary rounded-md shadow-md text-sm text-white px-3 py-2"
                 >
                   Learn More
