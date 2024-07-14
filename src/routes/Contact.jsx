@@ -33,52 +33,52 @@ const Contact = () => {
         </header>
         <div className="contact flex flex-col justify-center">
           <div className="contact-information md:my-16 md:w-[80%] mx-auto flex flex-col justify-center items-center">
-            <div className="heading my-4 lg:mb-8 md:mb-6">
+            <div className="heading my-8 lg:mb-16">
               <h1 className="md:text-4xl text-3xl font-[500] heading-after">
                 Contact Information
               </h1>
             </div>
             <div className="information grid md:grid-cols-3 grid-col-1 justify-center md:gap-6 gap-4 p-4 relative z-0">
-              <div className="mailing-address relative shadow-primaryShadow md:p-8 p-4 flex gap-4 flex-col items-center text-center bg-white rounded-3xl">
+              <div className="mailing-address transition-all duration-150 ease-linear hover:bg-primary group relative shadow-primaryShadow md:p-8 p-4 flex gap-4 flex-col items-center text-center bg-white rounded-3xl">
                 <span>
-                  <MdOutlineAddLocationAlt
-                    size={100}
-                    className="text-gray-950"
-                  />
+                  <MdOutlineAddLocationAlt className="text-gray-950 text-6xl group-hover:text-white" />
                 </span>
-                <h2 className="text-balance font-bold text-2xl text-gray-950 font-montserrat">
+                <h2 className="text-balance font-bold text-xl text-gray-950 font-montserrat group-hover:text-white">
                   Mailing Address
                 </h2>
-                <p className="text-gray-500 font-montserrat">
+                <p className="text-gray-500 font-montserrat text-sm leading-6 group-hover:text-gray-200">
                   Flat 8, 2nd Floor, Riyadh Street Thouqba, Al Khobar 31952,
                   Kingdom of Saudi Arabia.
                 </p>
               </div>
-              <div className="email-info relative shadow-primaryShadow md:p-8 p-4 flex gap-4 flex-col items-center text-center bg-white rounded-3xl">
+              <div className="email-info relative transition-all duration-150 ease-linear hover:bg-primary group shadow-primaryShadow md:p-8 p-4 flex gap-4 flex-col items-center text-center bg-white rounded-3xl">
                 <span>
-                  <MdAttachEmail size={100} className="text-gray-950" />
+                  <MdAttachEmail className="text-gray-950 text-6xl group-hover:text-white" />
                 </span>
-                <h2 className="text-balance font-bold text-2xl text-gray-950 font-montserrat">
+                <h2 className="text-balance font-bold text-xl group-hover:text-white text-gray-950 font-montserrat">
                   Email Info
                 </h2>
                 <p className="text-gray-500 font-montserrat">
                   <Link
-                    className="hover:underline"
+                    className="hover:underline group-hover:text-gray-200"
                     to={"mailto:info@nujumalmiad.com"}
                   >
                     info@nujumalmiad.com
                   </Link>
                 </p>
               </div>
-              <div className="phone-number relative shadow-primaryShadow md:p-8 p-4 flex gap-4 flex-col items-center text-center bg-white rounded-3xl">
+              <div className="phone-number relative group transition-all duration-150 ease-linear hover:bg-primary shadow-primaryShadow md:p-8 p-4 flex gap-4 flex-col items-center text-center bg-white rounded-3xl">
                 <span>
-                  <MdOutlinePhoneIphone size={100} className="text-gray-950" />
+                  <MdOutlinePhoneIphone className="text-gray-950 text-6xl group-hover:text-white" />
                 </span>
-                <h2 className="text-balance font-bold text-2xl text-gray-950 font-montserrat">
+                <h2 className="text-balance font-bold text-xl text-gray-950 font-montserrat group-hover:text-white">
                   Phone Number
                 </h2>
                 <p className="text-gray-500 font-montserrat">
-                  <Link to={"tel:+00966567710596"} className="hover:underline">
+                  <Link
+                    to={"tel:+00966567710596"}
+                    className="hover:underline group-hover:text-gray-200"
+                  >
                     +966 567710596
                   </Link>
                 </p>
@@ -87,7 +87,7 @@ const Contact = () => {
           </div>
           <div className="contact-form md:py-16 flex flex-col items-center bg-white md:p-6 font-montserrat">
             <div className="heading">
-              <h1 className="md:text-4xl text-3xl font-[500] text-gray-950 my-4 lg:mb-8 md:mb-6 heading-after">
+              <h1 className="md:text-4xl text-3xl font-[500] text-gray-950 my-8 lg:mb-16 heading-after">
                 Send us a message
               </h1>
             </div>
