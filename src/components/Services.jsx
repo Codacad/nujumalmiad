@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -6,11 +6,13 @@ import "swiper/css";
 import "swiper/css/navigation";
 import services from "../state/services";
 import { FaArrowRight } from "react-icons/fa6";
-import "../css/navigation.css";
+import "../css/service-navigation.css";
 const Services = () => {
   const [windowWidth, setWindowWidth] = useState({
     width: window.innerWidth,
   });
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth({
@@ -19,6 +21,14 @@ const Services = () => {
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  useEffect(() => {
+    if (prevRef.current && nextRef.current) {
+      const swiper = document.querySelector(".swiper").swiper;
+      swiper.params.navigation.prevEl = prevRef.current;
+      swiper.params.navigation.nextEl = nextRef.current;
+      swiper.navigation.update();
+    }
   }, []);
   return (
     <>
@@ -40,7 +50,6 @@ const Services = () => {
               ? 2
               : 1
           }
-          navigation={true}
           className="services flex md:w-[80%] p-4 w-full relative"
           spaceBetween={30}
         >
@@ -73,7 +82,6 @@ const Services = () => {
                   <Link
                     className="group text-gray-700 mt-4 transition-all duration-150 ease-linear hover:underline hover:gap-3 rounded-md w-32 flex gap-2 items-center"
                     to={`/services/${service.name}`}
-                    
                   >
                     <span className="hover:opacity-80 transition-all duration-150">
                       Read More
@@ -88,6 +96,14 @@ const Services = () => {
             );
           })}
         </Swiper>
+        <div className="swiper-navigation text-primary font-bold">
+          <button ref={prevRef} className="custom-swiper-prev">
+            ←
+          </button>
+          <button ref={nextRef} className="custom-swiper-next">
+            →
+          </button>
+        </div>
       </div>
     </>
   );
