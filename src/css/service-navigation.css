@@ -1,7 +1,6 @@
 .swiper-navigation {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
 }
 
 .custom-swiper-prev, .custom-swiper-next {
@@ -10,6 +9,8 @@
   font-size: 24px;
   cursor: pointer;
   margin: 0 10px;
+  font-weight: bold;
+  font-size: 38px;
 }
 
 .custom-swiper-prev:focus, .custom-swiper-next:focus {
