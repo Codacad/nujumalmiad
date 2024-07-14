@@ -2,3 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@layer utilities {
+    .heading-after {
+      position: relative;
+       }
+  
+    .heading-after::after {
+      content: '';
+      display: block;
+      width: 50%;
+      height: 4px;
+      background-color: #da880a; /* Change this to your preferred color */
+      position: absolute;
+      bottom: -15px; /* Adjust the position as needed */
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }

@@ -33,8 +33,8 @@ const Contact = () => {
         </header>
         <div className="contact flex flex-col justify-center">
           <div className="contact-information md:my-16 md:w-[80%] mx-auto flex flex-col justify-center items-center">
-            <div className="heading mb-8">
-              <h1 className="md:text-4xl text-2xl font-[500]">
+            <div className="heading my-4 lg:mb-8 md:mb-6">
+              <h1 className="md:text-4xl text-3xl font-[500] heading-after">
                 Contact Information
               </h1>
             </div>
@@ -87,7 +87,7 @@ const Contact = () => {
           </div>
           <div className="contact-form md:py-16 flex flex-col items-center bg-white md:p-6 font-montserrat">
             <div className="heading">
-              <h1 className="md:text-4xl text-2xl font-[500] text-gray-950 mb-8">
+              <h1 className="md:text-4xl text-3xl font-[500] text-gray-950 my-4 lg:mb-8 md:mb-6 heading-after">
                 Send us a message
               </h1>
             </div>
