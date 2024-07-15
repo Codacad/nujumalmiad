@@ -13,7 +13,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <nav className="flex gap-4 font-montserrat bg-gradient-to-r from-blue-50 to-cyan-100 items-center md:px-8 px-2">
+      <nav className="flex gap-4 font-montserrat bg-white items-center md:px-8 px-2">
         <h1 className="logo">
           <Link to={"/"}>
             <img src={Logo} alt="" />
