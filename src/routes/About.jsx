@@ -30,12 +30,12 @@ const About = () => {
               <img
                 src={DottedImg}
                 alt=""
-                className="absolute -top-10 -left-10 w-[200px] h-[200px] -z-10"
+                className="absolute md:-top-10 -top-4 md:-left-10 -left-4 md:w-[200px] md:h-[200px] w-[100px] h-[100px] -z-10"
               />
               <img
                 src={DottedImg}
                 alt=""
-                className="absolute -right-10 -bottom-10 -z-10 w-[200px] h-[200px]"
+                className="absolute md:-right-10 -right-4 md:-bottom-10 -bottom-4 -z-10 md:w-[200px] md:h-[200px] w-[100px] h-[100px]"
               />
             </div>
           </header>
