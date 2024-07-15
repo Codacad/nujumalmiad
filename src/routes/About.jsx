@@ -88,16 +88,16 @@ const About = () => {
                 className="absolute -right-6 -bottom-6 -z-10 w-[100px] h-[100px]"
               />
             </div>
-            <div className="flex flex-col justify-center font-roboto p-6">
+            <div className="flex flex-col justify-center font-roboto md:p-6">
               <h3 className="text-primary">Vision</h3>
-              <h1 className="text-4xl font-bold text-gray-950 leading-6">
+              <h1 className="text-4xl font-bold text-gray-950 md:leading-6 leading-10">
                 Dream untill your dreams come true
               </h1>
               <Link
                 className="w-[100px] transition-all duration-100 ease-linear mt-6 hover:bg-gray-950 ring-1 ring-gray-950 hover:text-gray-100 rounded-md p-2 bg-white text-gray-950 flex hover:gap-3 gap-2 items-center"
                 to={"/contact"}
               >
-                <TbArrowNarrowLeft />
+                <TbArrowNarrowLeft className="max-md:rotate-180" />
                 <span>Contact</span>
               </Link>
             </div>
