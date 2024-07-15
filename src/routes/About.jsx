@@ -12,7 +12,7 @@ const About = () => {
           <header className=" flex flex-col gap-4 items-center text-center leading-8">
             <div className="content md:m-16 font-roboto">
               <h3 className="text-primary font-montserrat">About</h3>
-              <h1 className="md:text-6xl font-[600] mb-4 text-gray-950">
+              <h1 className="md:text-6xl text-4xl font-[600] mb-4 text-gray-950">
                 Our Company
               </h1>
               <p className="md:w-[60%] text-center mx-auto text-gray-500">
@@ -42,7 +42,7 @@ const About = () => {
           <div className="mission grid md:grid-cols-2 grid-col-1 gap-4 p-4 bg-gray-950 rounded-xl md:mt-32 mt-8">
             <div className="flex flex-col justify-center font-roboto p-6">
               <h3 className="text-primary">Mission</h3>
-              <h1 className="md:text-4xl font-bold text-gray-100">
+              <h1 className="text-4xl font-bold text-gray-100">
                 How we work with our clients
               </h1>
               <Link
@@ -90,7 +90,7 @@ const About = () => {
             </div>
             <div className="flex flex-col justify-center font-roboto p-6">
               <h3 className="text-primary">Vision</h3>
-              <h1 className="md:text-4xl font-bold text-gray-950 leading-8">
+              <h1 className="text-4xl font-bold text-gray-950 leading-6">
                 Dream untill your dreams come true
               </h1>
               <Link
