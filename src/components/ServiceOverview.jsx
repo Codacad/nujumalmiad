@@ -39,6 +39,13 @@ const ServiceOverview = () => {
             </div>
           </div>
         </header>
+        <div className="content flex w-full justify-center md:p-16 ">
+          {service.details.map((details) => (
+            <div key={details.id} className="md:w-[70%] w-full">
+              {details.description}
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );

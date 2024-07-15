@@ -90,7 +90,7 @@ const About = () => {
             </div>
             <div className="flex flex-col justify-center font-roboto md:p-6">
               <h3 className="text-primary">Vision</h3>
-              <h1 className="text-4xl font-bold text-gray-950 md:leading-6 leading-10">
+              <h1 className="text-4xl font-bold text-gray-950 md:leading-8 leading-10">
                 Dream untill your dreams come true
               </h1>
               <Link

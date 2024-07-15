@@ -61,11 +61,11 @@ const WhyChooseUs = () => {
           </Swiper>
           <div className="benefits bg-white relative w-full z-0 flex flex-col items-center gap-4 mx-auto p-4 my-4">
             <div className="content  md:w-[80%] md:grid grid-cols-2 flex flex-col gap-4">
-              <ul className="flex flex-col gap-4 justify-center md:text-md text-sm font-montserrat">
-                <h3 className="text-3xl text-gray-950 font-bold mb-4 flex flex-col after:contents-[''] after:block after:bottom-0 after:left-0 after:w-24 after:h-1 after:rounded-sm after:bg-primary">
+              <ul className="flex flex-col gap-4 justify-center md:text-md text-sm font-roboto">
+                <h3 className="md:text-4xl text-2xl text-gray-950 font-bold mb-4 flex flex-col after:contents-[''] after:block after:bottom-0 after:left-0 after:w-24 after:h-1 after:rounded-sm after:bg-primary">
                   Benefits to Clients
                 </h3>
-                <li className="flex items-center gap-2">
+                <li className="flex items-center gap-2 md:text-xl">
                   <span>
                     <FaCircleCheck className="text-primary" />
                   </span>
@@ -74,7 +74,7 @@ const WhyChooseUs = () => {
                     management.
                   </span>
                 </li>
-                <li className="flex items-center gap-2">
+                <li className="flex items-center gap-2 md:text-xl">
                   <span>
                     <FaCircleCheck className="text-primary" />
                   </span>
@@ -82,7 +82,7 @@ const WhyChooseUs = () => {
                     Cost efficiency through optimized resource management.
                   </span>
                 </li>
-                <li className="flex items-center gap-2">
+                <li className="flex items-center gap-2 md:text-xl">
                   <span>
                     <FaCircleCheck className="text-primary" />
                   </span>
@@ -90,7 +90,7 @@ const WhyChooseUs = () => {
                     Reliable support from project inception to completion.
                   </span>
                 </li>
-                <li className="flex items-center gap-2">
+                <li className="flex items-center gap-2 md:text-xl">
                   <span>
                     <FaCircleCheck className="text-primary" />
                   </span>
@@ -98,7 +98,7 @@ const WhyChooseUs = () => {
                     Commitment to safety and adherence to industry standards.
                   </span>
                 </li>
-                <li className="flex items-center gap-2">
+                <li className="flex items-center gap-2 md:text-xl">
                   <span>
                     <FaCircleCheck className="text-primary" />
                   </span>
@@ -106,7 +106,7 @@ const WhyChooseUs = () => {
                     Access to skilled manpower with specialized expertise.
                   </span>
                 </li>
-                <li className="flex items-center gap-2">
+                <li className="flex items-center gap-2 md:text-xl">
                   <span>
                     <FaCircleCheck className="text-primary" />
                   </span>
@@ -115,7 +115,7 @@ const WhyChooseUs = () => {
                     programs.
                   </span>
                 </li>
-                <li className="flex items-center gap-2">
+                <li className="flex items-center gap-2 md:text-xl">
                   <span>
                     <FaCircleCheck className="text-primary" />
                   </span>
