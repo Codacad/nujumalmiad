@@ -1,22 +1,57 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Aleo:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Aleo:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 @layer utilities {
-    .heading-after {
-      position: relative;
-       }
-  
-    .heading-after::after {
-      content: '';
-      display: block;
-      width: 50%;
-      height: 4px;
-      background-color: #da880a; /* Change this to your preferred color */
-      position: absolute;
-      bottom: -15px; /* Adjust the position as needed */
-      left: 50%;
-      transform: translateX(-50%);
+  .heading-after {
+    position: relative;
+  }
+
+  .heading-after::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 4px;
+    background-color: #da880a; /* Change this to your preferred color */
+    position: absolute;
+    bottom: -15px; /* Adjust the position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .scroll-animation {
+    animation: fades-in;
+    animation-timeline: view();
+    animation-range-start: 200px;
+    animation-range-end: 700px;
+  }
+
+  @keyframes fades-in {
+    from {
+      scale: 0.8;
+      opacity: 0;
+    }
+    to {
+      scale: 1;
+      opacity: 1;
     }
   }
+  .scroll-drawer {
+    position: fixed;
+    width: 0%;
+    top: 0;
+    left: 0;
+    height: 5px;
+    border-radius: 5px;
+    animation: scroll-drawer linear;
+    animation-timeline: scroll();
+    z-index: 100;
+    background-color: #da880a;
+  }
+  @keyframes scroll-drawer {
+    to {
+      width: 100%;
+    }
+  }
+}

@@ -45,7 +45,7 @@ const Services = () => {
   return (
     <>
       <div className="container font-montserrat md:min-h-[100vh] max-md:py-4 bg-gradient-to-r from-gray-100 to-gray-50 w-full flex flex-col items-center justify-center">
-        <header className="md:w-[80%] w-full px-4">
+        <header className="md:w-[80%] scroll-animation w-full px-4">
           <h4 className="text-primary md:mb-4 mb-2 text-xl">Services</h4>
           <h1 className="text-gray-800 md:text-4xl text-2xl md:mb-4 mb-2 md font-bold after:contents-[''] after:block after:bottom-0 after:left-0 after:w-24 after:h-1 after:rounded-sm after:bg-primary">
             Our Core Services
@@ -66,7 +66,7 @@ const Services = () => {
             delay: 3000,
             disableOnInteraction: false,
           }}
-          className="services flex md:w-[80%] p-4 w-full relative"
+          className="services scroll-animation flex md:w-[80%] p-4 w-full relative"
           spaceBetween={30}
           onSwiper={setSwiperInstance}
           navigation={{

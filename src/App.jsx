@@ -8,7 +8,7 @@ import Spinner from "./components/Spinner";
 import { useEffect } from "react";
 function App() {
   const { loading } = useSelector((state) => state.spiner);
-  const location = useLocation()
+  const location = useLocation();
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(showSpinner());
@@ -20,6 +20,7 @@ function App() {
   return (
     <>
       {loading && <Spinner />}
+      <div className="scroll-drawer"></div>
       <Navbar />
       <Outlet />
       <Sidenav />

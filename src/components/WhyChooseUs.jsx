@@ -23,7 +23,7 @@ const WhyChooseUs = () => {
   return (
     <>
       <section className="why-choose-us bg-gray-50">
-        <div className="container flex flex-col">
+        <div className="container scroll-animation flex flex-col">
           <h2 className="text-center flex justify-center items-center gap-3 flex-col md:my-8 md:text-4xl max-md:mt-8 text-2xl mb-6 font-bold text-gray-950 font-montserrat after:contents-[''] after:block after:bottom-0 after:left-0 after:w-32 after:h-1 after:rounded-sm after:bg-primary">
             Why Choose Us
           </h2>
