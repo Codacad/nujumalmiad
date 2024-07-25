@@ -1,10 +1,196 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { RxCaretRight } from "react-icons/rx";
 import { MdAttachEmail } from "react-icons/md";
 import { MdOutlinePhoneIphone } from "react-icons/md";
 import { MdOutlineAddLocationAlt } from "react-icons/md";
+
 const Contact = () => {
+  const nameErrorRef = useRef();
+  const emailErrorRef = useRef();
+  const phoneErrorRef = useRef();
+  const subjectErrorRef = useRef();
+  const msgErrorRef = useRef();
+
+  const [message, setMessage] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    msg: "",
+  });
+  const [error, setError] = useState({
+    nameError: false,
+    emailError: false,
+    phoneError: false,
+    subjectError: false,
+    msgError: false,
+  });
+  const [errorMessage, setErrorMessage] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    msg: "",
+  });
+
+  const { name, email, phone, subject, msg } = message;
+  const regex = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
+  const isEmailValid = regex.test(email);
+  let phoneNumber = Number(phone);
+  const handleNameChange = (e) => {
+    setMessage((prev) => ({
+      ...prev,
+      name: e.target.value,
+    }));
+
+    if (e.target.value.length < 5) {
+      setErrorMessage((prev) => ({
+        ...prev,
+        name: "Name must have at least 5 Characters",
+      }));
+      setError((prev) => ({ ...prev, nameError: true }));
+    } else {
+      setError((prev) => ({ ...prev, nameError: false }));
+    }
+    if (!e.target.value) {
+      setErrorMessage((prev) => ({
+        ...prev,
+        name: "Name is required",
+      }));
+      setError((prev) => ({ ...prev, nameError: true }));
+    }
+  };
+  const handleEmailChange = (e) => {
+    setMessage((prev) => ({
+      ...prev,
+      email: e.target.value,
+    }));
+    if (!isEmailValid) {
+      setErrorMessage((prev) => ({
+        ...prev,
+        email: "Enter a valid email",
+      }));
+      setError((prev) => ({ ...prev, emailError: true }));
+    } else {
+      setError((prev) => ({ ...prev, emailError: false }));
+    }
+    if (!e.target.value) {
+      setErrorMessage((prev) => ({
+        ...prev,
+        email: "Email is required",
+      }));
+      setError((prev) => ({ ...prev, emailError: true }));
+    }
+  };
+  const handlePhoneChange = (e) => {
+    setMessage((prev) => ({
+      ...prev,
+      phone: e.target.value,
+    }));
+    if (e.target.value.length < 5) {
+      setErrorMessage((prev) => ({
+        ...prev,
+        phone: "Phone must be valid",
+      }));
+      setError((prev) => ({ ...prev, phoneError: true }));
+    } else {
+      setError((prev) => ({ ...prev, phoneError: false }));
+    }
+
+    if (!e.target.value) {
+      setErrorMessage((prev) => ({
+        ...prev,
+        phone: "Phone Number is required",
+      }));
+      setError((prev) => ({ ...prev, phoneError: true }));
+    }
+  };
+  const handleSubjectChange = (e) => {
+    setMessage((prev) => ({
+      ...prev,
+      subject: e.target.value,
+    }));
+    if (e.target.value.length < 10) {
+      setErrorMessage((prev) => ({
+        ...prev,
+        subject: "Subject must have at least 10 Characters",
+      }));
+      setError((prev) => ({ ...prev, subjectError: true }));
+    } else {
+      setError((prev) => ({ ...prev, subjectError: false }));
+    }
+    if (!e.target.value) {
+      setErrorMessage((prev) => ({
+        ...prev,
+        subject: "Subject is required",
+      }));
+      setError((prev) => ({ ...prev, subjectError: true }));
+    }
+  };
+  const handleMsgChange = (e) => {
+    setMessage((prev) => ({
+      ...prev,
+      msg: e.target.value,
+    }));
+    if (e.target.value.length < 25) {
+      setErrorMessage((prev) => ({
+        ...prev,
+        msg: "Message must have at least 25 Characters",
+      }));
+      setError((prev) => ({ ...prev, msgError: true }));
+    } else {
+      setError((prev) => ({ ...prev, msgError: false }));
+    }
+    if (!e.target.value) {
+      setErrorMessage((prev) => ({
+        ...prev,
+        msg: "Subject is required",
+      }));
+      setError((prev) => ({ ...prev, msgError: true }));
+    }
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!name) {
+      setErrorMessage((prev) => ({
+        ...prev,
+        name: "Name is required",
+      }));
+      setError((prev) => ({ ...prev, nameError: true }));
+    }
+    if (!email) {
+      setErrorMessage((prev) => ({
+        ...prev,
+        email: "Email is required",
+      }));
+      setError((prev) => ({ ...prev, emailError: true }));
+    }
+
+    if (!phone) {
+      setErrorMessage((prev) => ({
+        ...prev,
+        phone: "Phone is required",
+      }));
+      setError((prev) => ({ ...prev, phoneError: true }));
+    }
+    if (!subject) {
+      setErrorMessage((prev) => ({
+        ...prev,
+        subject: "Subject is required",
+      }));
+      setError((prev) => ({ ...prev, subjectError: true }));
+    }
+    if (!msg) {
+      setErrorMessage((prev) => ({
+        ...prev,
+        msg: "Message is required",
+      }));
+      setError((prev) => ({ ...prev, msgError: true }));
+    }
+  };
+
   return (
     <>
       <div className="contact-us bg-gray-100">
@@ -92,32 +278,132 @@ const Contact = () => {
               </h1>
             </div>
             <div className="form md:w-[60%] w-full max-md:p-4">
-              <form className="grid md:grid-cols-2 md:gap-6 gap-4">
-                <input
-                  type="text"
-                  placeholder="Name"
-                  className="py-2 px-4 transition-all duration-100 ease-linear focus:ring-2 ring-primary outline-none shadow-sm border  rounded-md text-gray-500 border-gray-200"
-                />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="py-2 px-4 transition-all duration-100 ease-linear focus:ring-2 ring-primary outline-none shadow-sm border border-gray-200 rounded-md text-gray-500"
-                />
-                <input
-                  type="text"
-                  placeholder="Phone"
-                  className="py-2 px-4 transition-all duration-100 ease-linear focus:ring-2 ring-primary outline-none shadow-sm border border-gray-200 rounded-md text-gray-500"
-                />
-                <input
-                  type="text"
-                  placeholder="Subject"
-                  className="py-2 px-4 transition-all duration-100 ease-linear focus:ring-2 ring-primary outline-none shadow-sm border border-gray-200 rounded-md text-gray-500"
-                />
-                <textarea
-                  className="md:col-span-2 py-2 px-4 transition-all duration-100 ease-linear focus:ring-2 ring-primary outline-none shadow-sm border rounded-md text-gray-500 border-gray-200"
-                  placeholder="Message"
-                  rows={7}
-                ></textarea>
+              <form
+                className="grid md:grid-cols-2 md:gap-6 gap-4"
+                onSubmit={handleSubmit}
+              >
+                <div className="flex flex-col gap-1">
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    name="name"
+                    value={message.name}
+                    onChange={handleNameChange}
+                    className={`py-2 px-4 transition-all duration-100 ease-linear outline-none border  rounded-md text-gray-500 border-gray-200 ${
+                      error.nameError
+                        ? "ring-1 ring-red-500 transition-all duration-100 ease-linear"
+                        : ""
+                    }`}
+                  />
+                  <span
+                    ref={nameErrorRef}
+                    className={`${
+                      error.nameError
+                        ? "block text-red-500 text-[12px]"
+                        : "hidden"
+                    }`}
+                  >
+                    {errorMessage.name}
+                  </span>
+                </div>
+
+                <div className="flex flex-col gap-1">
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    value={message.email}
+                    onChange={handleEmailChange}
+                    name="email"
+                    className={`py-2 px-4 transition-all duration-100 ease-linear outline-none border  rounded-md text-gray-500 border-gray-200 ${
+                      error.emailError
+                        ? "ring-1 ring-red-500 transition-all duration-100 ease-linear"
+                        : ""
+                    }`}
+                  />
+                  <span
+                    ref={emailErrorRef}
+                    className={`${
+                      error.emailError
+                        ? "block text-red-500 text-[12px]"
+                        : "hidden"
+                    }`}
+                  >
+                    {errorMessage.email}
+                  </span>
+                </div>
+                <div className="flex flex-col gap-1">
+                  <input
+                    type="number"
+                    placeholder="Phone"
+                    name="phone"
+                    value={message.phone}
+                    onChange={handlePhoneChange}
+                    className={`py-2 px-4 transition-all no-spinner duration-100 ease-linear outline-none border  rounded-md text-gray-500 border-gray-200 ${
+                      error.phoneError
+                        ? "ring-1 ring-red-500 transition-all duration-100 ease-linear"
+                        : ""
+                    }`}
+                  />
+                  <span
+                    ref={phoneErrorRef}
+                    className={`${
+                      error.phoneError
+                        ? "block text-red-500 text-[12px]"
+                        : "hidden"
+                    }`}
+                  >
+                    {errorMessage.phone}
+                  </span>
+                </div>
+                <div className="flex flex-col gap-1">
+                  <input
+                    type="text"
+                    placeholder="Subject"
+                    name="subject"
+                    value={message.subject}
+                    onChange={handleSubjectChange}
+                    className={`py-2 px-4 transition-all duration-100 ease-linear outline-none border  rounded-md text-gray-500 border-gray-200 ${
+                      error.subjectError
+                        ? "ring-1 ring-red-500 transition-all duration-100 ease-linear"
+                        : ""
+                    }`}
+                  />
+
+                  <span
+                    ref={subjectErrorRef}
+                    className={`${
+                      error.subjectError
+                        ? "block text-red-500 text-[12px]"
+                        : "hidden"
+                    }`}
+                  >
+                    {errorMessage.subject}
+                  </span>
+                </div>
+                <div className="flex flex-col gap-1 md:col-span-2 ">
+                  <textarea
+                    className={`py-2 px-4 transition-all duration-100 ease-linear outline-none border  rounded-md text-gray-500 border-gray-200 ${
+                      error.msgError
+                        ? "ring-1 ring-red-500 transition-all duration-100 ease-linear"
+                        : ""
+                    }`}
+                    placeholder="Message"
+                    name="msg"
+                    value={message.msg}
+                    onChange={handleMsgChange}
+                    rows={7}
+                  ></textarea>
+                  <span
+                    ref={msgErrorRef}
+                    className={`${
+                      error.msgError
+                        ? "block text-red-500 text-[12px]"
+                        : "hidden"
+                    }`}
+                  >
+                    {errorMessage.msg}
+                  </span>
+                </div>
                 <button className="w-24 bg-gray-950 p-1 text-white rounded-sm">
                   Submit
                 </button>
@@ -133,7 +419,7 @@ const Contact = () => {
               frameBorder="0"
               style={{ border: 0 }}
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509376!2d144.95373631532258!3d-37.8162797420215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5775c1ba2db19c0!2sGoogle!5e0!3m2!1sen!2sus!4v1606582484161!5m2!1sen!2sus"
-              allowfullscreen=""
+              allowFullScreen=""
               aria-hidden="false"
               tabIndex="0"
               className="opacity-80"

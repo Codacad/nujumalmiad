@@ -39,9 +39,9 @@ const ServiceOverview = () => {
             </div>
           </div>
         </header>
-        <div className="content flex w-full justify-center md:p-16 ">
+        <div className="content bg-white flex w-full justify-center md:p-16 ">
           {service.details.map((details) => (
-            <div key={details.id} className="md:w-[70%] w-full">
+            <div key={details.id} className="md:w-[70%] w-full p-4 font-roboto text-md text-gray-600 leading-8">
               {details.description}
             </div>
           ))}

@@ -17,5 +17,22 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        ".no-spinner": {
+          "-moz-appearance": "textfield",
+          "-webkit-appearance": "none",
+          "&::-webkit-outer-spin-button": {
+            "-webkit-appearance": "none",
+            margin: 0,
+          },
+          "&::-webkit-inner-spin-button": {
+            "-webkit-appearance": "none",
+            margin: 0,
+          },
+        },
+      });
+    },
+  ],
 };
