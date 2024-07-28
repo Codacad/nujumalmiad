@@ -17,8 +17,8 @@ const Sidenav = () => {
       <div
         className={`sidenav fixed top-0 ${
           !toggle
-            ? "-right-[100%] transition-opacity duration-200 ease-linear"
-            : "right-0 transition-opacity duration-500 ease-linear"
+            ? "-right-[100%]"
+            : "right-0"
         } w-full min-h-screen z-20 bg-[rgba(0,0,0,.5)]`}
       >
         <nav

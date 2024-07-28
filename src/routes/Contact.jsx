@@ -1,17 +1,17 @@
 import React, { useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { RxCaretRight } from "react-icons/rx";
 import { MdAttachEmail } from "react-icons/md";
 import { MdOutlinePhoneIphone } from "react-icons/md";
 import { MdOutlineAddLocationAlt } from "react-icons/md";
-
+import emailjs from "@emailjs/browser";
 const Contact = () => {
+  const navigate = useNavigate();
   const nameErrorRef = useRef();
   const emailErrorRef = useRef();
   const phoneErrorRef = useRef();
   const subjectErrorRef = useRef();
   const msgErrorRef = useRef();
-
   const [message, setMessage] = useState({
     name: "",
     email: "",
@@ -20,11 +20,11 @@ const Contact = () => {
     msg: "",
   });
   const [error, setError] = useState({
-    nameError: false,
-    emailError: false,
-    phoneError: false,
-    subjectError: false,
-    msgError: false,
+    nameError: true,
+    emailError: true,
+    phoneError: true,
+    subjectError: true,
+    msgError: true,
   });
   const [errorMessage, setErrorMessage] = useState({
     name: "",
@@ -33,11 +33,10 @@ const Contact = () => {
     subject: "",
     msg: "",
   });
-
+  const [responseMessage, setResponseMessage] = useState("");
   const { name, email, phone, subject, msg } = message;
   const regex = /^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$/;
   const isEmailValid = regex.test(email);
-  let phoneNumber = Number(phone);
   const handleNameChange = (e) => {
     setMessage((prev) => ({
       ...prev,
@@ -88,10 +87,10 @@ const Contact = () => {
       ...prev,
       phone: e.target.value,
     }));
-    if (e.target.value.length < 5) {
+    if (e.target.value.length < 9) {
       setErrorMessage((prev) => ({
         ...prev,
-        phone: "Phone must be valid",
+        phone: "Phonem number must be valid",
       }));
       setError((prev) => ({ ...prev, phoneError: true }));
     } else {
@@ -150,6 +149,17 @@ const Contact = () => {
       setError((prev) => ({ ...prev, msgError: true }));
     }
   };
+
+  const templateParams = {
+    subject,
+    from_name: name,
+    from_email: email,
+    to_name: "Nujum Al Miad Team",
+    phone,
+    to_email: "info@nujumalmiad.com",
+    message: msg,
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -189,11 +199,50 @@ const Contact = () => {
       }));
       setError((prev) => ({ ...prev, msgError: true }));
     }
+    console.log(error);
+    // Send Email Message
+    if (
+      error.nameError ||
+      error.emailError ||
+      error.phoneError ||
+      error.subjectError ||
+      error.msgError
+    ) {
+      console.log("Please fill the correct details");
+    } else {
+      setResponseMessage("loading");
+      emailjs
+        .send(
+          "service_z3szqmb",
+          "template_5d7ct9j",
+          templateParams,
+          "mk081_OjSCUIGrAxq"
+        )
+        .then(
+          () => {
+            setResponseMessage("success");
+            setMessage({
+              name: "",
+              email: "",
+              phone: "",
+              subject: "",
+              msg: "",
+            });
+            setTimeout(() => {
+              navigate("/");
+            }, 1000);
+          },
+          (error) => {
+            console.log("FAILED...", error);
+            setResponseMessage("failed");
+          }
+        );
+    }
   };
 
   return (
     <>
-      <div className="contact-us bg-gray-100">
+      <div className="contact-us bg-gray-100 relative">
         <header className="md:min-h-[50vh] z-10 text-center h-[40vh] relative flex justify-center items-center">
           <div
             className={`-z-10 bg-[url('/images/contact-us.jpg')] absolute w-full bg-cover bg-center bg-no-repeat md:h-[50vh] h-[40vh] object-center`}
@@ -289,11 +338,7 @@ const Contact = () => {
                     name="name"
                     value={message.name}
                     onChange={handleNameChange}
-                    className={`py-2 px-4 transition-all duration-100 ease-linear outline-none border  rounded-md text-gray-500 border-gray-200 ${
-                      error.nameError
-                        ? "ring-1 ring-red-500 transition-all duration-100 ease-linear"
-                        : ""
-                    }`}
+                    className={`py-2 px-4 transition-all duration-100 ease-linear outline-none border  rounded-md text-gray-500 border-gray-200`}
                   />
                   <span
                     ref={nameErrorRef}
@@ -314,11 +359,7 @@ const Contact = () => {
                     value={message.email}
                     onChange={handleEmailChange}
                     name="email"
-                    className={`py-2 px-4 transition-all duration-100 ease-linear outline-none border  rounded-md text-gray-500 border-gray-200 ${
-                      error.emailError
-                        ? "ring-1 ring-red-500 transition-all duration-100 ease-linear"
-                        : ""
-                    }`}
+                    className={`py-2 px-4 transition-all duration-100 ease-linear outline-none border  rounded-md text-gray-500 border-gray-200`}
                   />
                   <span
                     ref={emailErrorRef}
@@ -338,11 +379,7 @@ const Contact = () => {
                     name="phone"
                     value={message.phone}
                     onChange={handlePhoneChange}
-                    className={`py-2 px-4 transition-all no-spinner duration-100 ease-linear outline-none border  rounded-md text-gray-500 border-gray-200 ${
-                      error.phoneError
-                        ? "ring-1 ring-red-500 transition-all duration-100 ease-linear"
-                        : ""
-                    }`}
+                    className={`py-2 px-4 transition-all no-spinner duration-100 ease-linear outline-none border  rounded-md text-gray-500 border-gray-200`}
                   />
                   <span
                     ref={phoneErrorRef}
@@ -362,11 +399,7 @@ const Contact = () => {
                     name="subject"
                     value={message.subject}
                     onChange={handleSubjectChange}
-                    className={`py-2 px-4 transition-all duration-100 ease-linear outline-none border  rounded-md text-gray-500 border-gray-200 ${
-                      error.subjectError
-                        ? "ring-1 ring-red-500 transition-all duration-100 ease-linear"
-                        : ""
-                    }`}
+                    className={`py-2 px-4 transition-all duration-100 ease-linear outline-none border  rounded-md text-gray-500 border-gray-200`}
                   />
 
                   <span
@@ -382,11 +415,7 @@ const Contact = () => {
                 </div>
                 <div className="flex flex-col gap-1 md:col-span-2 ">
                   <textarea
-                    className={`py-2 px-4 transition-all duration-100 ease-linear outline-none border  rounded-md text-gray-500 border-gray-200 ${
-                      error.msgError
-                        ? "ring-1 ring-red-500 transition-all duration-100 ease-linear"
-                        : ""
-                    }`}
+                    className={`py-2 px-4 transition-all duration-100 ease-linear outline-none border  rounded-md text-gray-500 border-gray-200`}
                     placeholder="Message"
                     name="msg"
                     value={message.msg}
@@ -404,19 +433,35 @@ const Contact = () => {
                     {errorMessage.msg}
                   </span>
                 </div>
-                <button className="w-24 bg-gray-950 p-1 text-white rounded-sm">
-                  Submit
+                {responseMessage == "success" ? (
+                  <span className="col-span-2 p-2 bg-green-100 text-green-600">
+                    Message sent succesfully
+                  </span>
+                ) : responseMessage == "failed" ? (
+                  <span>Something went wrong</span>
+                ) : (
+                  ""
+                )}
+                <button className="w-28 bg-gray-950 p-1 text-white rounded-sm">
+                  {responseMessage == "loading" ? (
+                    <div className="flex justify-center gap-2 items-center bg-[rgba(0,0,0,.5)]">
+                      <div className="animate-spin w-4 h-4 border-2 border-[rgba(255,255,255,.5)] border-t-2 border-t-black rounded-full"></div>
+                      <span className="text-gray-500">Loading...</span>
+                    </div>
+                  ) : (
+                    <span>Submit</span>
+                  )}
                 </button>
               </form>
             </div>
           </div>
         </div>
+
         <div className="map">
           <div className="w-full md:h-[500px] h-[200px]">
             <iframe
               width="100%"
               height="100%"
-              frameBorder="0"
               style={{ border: 0 }}
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509376!2d144.95373631532258!3d-37.8162797420215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5775c1ba2db19c0!2sGoogle!5e0!3m2!1sen!2sus!4v1606582484161!5m2!1sen!2sus"
               allowFullScreen=""
