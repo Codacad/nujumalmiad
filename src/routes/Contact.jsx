@@ -446,7 +446,7 @@ const Contact = () => {
                   {responseMessage == "loading" ? (
                     <div className="flex justify-center gap-2 items-center bg-[rgba(0,0,0,.5)]">
                       <div className="animate-spin w-4 h-4 border-2 border-[rgba(255,255,255,.5)] border-t-2 border-t-black rounded-full"></div>
-                      <span className="text-gray-500">Loading...</span>
+                      <span className="text-gray-500">Sending...</span>
                     </div>
                   ) : (
                     <span>Submit</span>

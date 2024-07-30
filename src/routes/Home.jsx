@@ -10,6 +10,7 @@ import { Autoplay, EffectFade, Pagination, Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
 import WhyChooseUs from "../components/WhyChooseUs";
 import Services from "../components/Services";
+import CoreValuesCommitments from "../components/CoreValuesCommitments";
 
 const Home = () => {
   const [windowWidth, setWindowWidth] = useState({
@@ -203,6 +204,7 @@ const Home = () => {
       </Swiper>
       <Services />
       <WhyChooseUs />
+      <CoreValuesCommitments />
     </>
   );
 };

@@ -11,6 +11,7 @@ export default {
         roboto: ['"Roboto"', "sans-serif"],
         aleo: ['"Aleo"', "serif"],
         alegreya: ['"Alegreya"', "serif"],
+        spaceGrotesk:["Space Grotesk", "sans-serif"]
       },
       boxShadow: {
         primaryShadow: "0px 3px 0px #da880a",

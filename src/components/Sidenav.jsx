@@ -22,7 +22,7 @@ const Sidenav = () => {
         } w-full min-h-screen z-20 bg-[rgba(0,0,0,.5)]`}
       >
         <nav
-          className={`w-[400px] min-h-full p-4 bg-white absolute right-0 top-0`}
+          className={`w-[400px] min-h-full p-4 bg-gray-100 absolute right-0 top-0`}
         >
           <header className="flex justify-between items-start border-b border-b-gray-200">
             <Link to={"/"}>
