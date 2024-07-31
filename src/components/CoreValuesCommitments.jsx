@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
-
+import { PiCaretCircleDoubleDownFill } from "react-icons/pi";
+import { BiSolidCaretDownCircle } from "react-icons/bi"
 import gsap from "gsap";
 const CoreValuesCommitments = () => {
   const [activeID, setActiveID] = useState(null);
@@ -83,9 +84,9 @@ const CoreValuesCommitments = () => {
 
   return (
     <>
-      <div className="core-values-commitment flex justify-center p-10 bg-gray-950 font-spaceGrotesk">
+      <div className="core-values-commitment flex justify-center md:p-10 p-4 bg-gray-950 font-spaceGrotesk">
         <div className="accrordion md:w-[70%] w-full flex flex-col gap-4">
-          <h1 className="text-4xl text-gray-400 font-bold mb-4">
+          <h1 className="text-4xl text-gray-100 font-bold mb-4">
             Our Core Values and Commitments
           </h1>
           {additionalContent.map((accord) => (
@@ -101,7 +102,11 @@ const CoreValuesCommitments = () => {
               >
                 <h2 className="text-gray-200 font-bold">{accord.heading}</h2>
                 <span>
-                  <FaCaretDown className="text-xl text-gray-50" />
+                  <BiSolidCaretDownCircle
+                    className={`text-xl text-gray-50 transition-all ease-linear duration-150 ${
+                      activeID === accord.id ? "rotate-180" : "rotate-0"
+                    }`}
+                  />
                 </span>
               </div>
               <div
@@ -125,7 +130,10 @@ const CoreValuesCommitments = () => {
                     </p>
                     <ul className="flex flex-col gap-2">
                       {accord.details.map((item, index) => (
-                        <li key={index} className="flex items-center gap-2 text-gray-400">
+                        <li
+                          key={index}
+                          className="flex items-center gap-2 text-gray-400"
+                        >
                           <IoCheckmarkCircleOutline size={20} />
                           <span>{item}</span>
                         </li>
