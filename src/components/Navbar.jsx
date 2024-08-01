@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import Logo from "/images/Logo200x70.svg";
+// import Logo from "/images/Logo200x70.svg";
+import Logo from "/images/logo.svg";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { setToggle } from "../state/slices/sidenavSlice";
 import { useDispatch, useSelector } from "react-redux";
@@ -16,7 +17,7 @@ const Navbar = () => {
       <nav className="flex gap-4 font-montserrat bg-white items-center md:px-8 px-2">
         <h1 className="logo">
           <Link to={"/"}>
-            <img src={Logo} alt="" />
+            <img src={Logo} alt="" className=""/>
           </Link>
         </h1>
         <ul className="text-gray-700 hidden md:flex gap-4 ml-6">
@@ -42,12 +43,12 @@ const Navbar = () => {
             <FaLinkedin size={20} />
           </span>
         </div>
-        <button className="ml-auto w-[130px] hidden md:block text-sm bg-black p-2 rounded-md shadow-md text-white">
+        <button className="ml-auto w-[130px] hidden md:block text-sm bg-primary p-2 rounded-md shadow-md text-white">
           Request Quote
         </button>
         <div className="hamburger block max-md:ml-auto">
           <span onClick={handleSidenavTogle} className="cursor-pointer">
-            <RiMenu3Line size={20} className="text-black font-bold" />
+            <RiMenu3Line size={20} className="text-primary font-bold" />
           </span>
         </div>
       </nav>

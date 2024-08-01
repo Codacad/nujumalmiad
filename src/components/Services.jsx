@@ -46,8 +46,8 @@ const Services = () => {
     <>
       <div className="container font-montserrat md:min-h-[100vh] max-md:py-4 bg-gradient-to-r from-gray-100 to-gray-50 w-full flex flex-col items-center justify-center">
         <header className="md:w-[80%] scroll-animation w-full px-4">
-          <h4 className="text-primary md:mb-4 mb-2 text-xl">Services</h4>
-          <h1 className="text-gray-800 md:text-4xl text-2xl md:mb-4 mb-2 md font-bold after:contents-[''] after:block after:bottom-0 after:left-0 after:w-24 after:h-1 after:rounded-sm after:bg-primary">
+          <h4 className="text-secondary md:mb-4 mb-2 text-xl">Services</h4>
+          <h1 className="text-primary md:text-4xl text-2xl md:mb-4 mb-2 md font-bold after:contents-[''] after:block after:bottom-0 after:left-0 after:w-24 after:h-1 after:rounded-sm after:bg-primary">
             Our Core Services
           </h1>
         </header>
@@ -87,29 +87,29 @@ const Services = () => {
                     alt={service.name}
                   />
                   <Link
-                    className="bg-black text-gray-50 text-sm p-[6px] rounded-md text-center w-32 absolute -bottom-[15px] left-6"
+                    className="bg-primary text-gray-50 text-sm p-[6px] rounded-md text-center w-32 absolute -bottom-[15px] left-6"
                     to={"#"}
                   >
                     Request Quote
                   </Link>
                 </div>
                 <div className="body flex flex-col gap-2 px-4 py-6">
-                  <div className="service__name md:text-2xl text-gray-700 font-bold text-xl truncate mt-4">
+                  <div className="service__name md:text-2xl text-primary font-bold text-xl truncate mt-4">
                     {service.name}
                   </div>
                   <div className="service__description truncate text-gray-400">
                     {service.short_description}
                   </div>
                   <Link
-                    className="group text-gray-700 mt-4 transition-all duration-150 ease-linear hover:underline hover:gap-3 rounded-md w-32 flex gap-2 items-center"
+                    className="group text-gray-700 mt-4 transition-all duration-150 ease-linear hover:opacity-80 hover:gap-3 rounded-md w-32 flex gap-2 items-center"
                     to={`/services/${service.name}`}
                   >
-                    <span className="hover:opacity-80 transition-all duration-150">
+                    <span className="hover:opacity-80 text-secondary transition-all duration-150">
                       Read More
                     </span>
                     <FaArrowRight
                       size={12}
-                      className="mt-[2] hover:opacity-80 transition-all duration-150"
+                      className="mt-[2] hover:opacity-80 text-secondary transition-all duration-150"
                     />
                   </Link>
                 </div>
@@ -120,8 +120,8 @@ const Services = () => {
         <div className="swiper-navigation">
           <button
             ref={prevRef}
-            className={`custom-swiper-prev ${
-              isBeginning ? "disabled text-gray-300" : ""
+            className={`custom-swiper-prev  ${
+              isBeginning ? "disabled text-gray-300" : "text-secondary"
             }`}
             disabled={isBeginning}
           >
@@ -129,8 +129,8 @@ const Services = () => {
           </button>
           <button
             ref={nextRef}
-            className={`custom-swiper-next ${
-              isEnd ? "disabled text-gray-300" : ""
+            className={`custom-swiper-next  ${
+              isEnd ? "disabled text-gray-300" : "text-secondary"
             }`}
             disabled={isEnd}
           >

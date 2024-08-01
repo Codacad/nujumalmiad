@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 import { IoCheckmarkCircleOutline } from "react-icons/io5";
 import { PiCaretCircleDoubleDownFill } from "react-icons/pi";
-import { BiSolidCaretDownCircle } from "react-icons/bi"
+import { BiSolidCaretDownCircle } from "react-icons/bi";
 import gsap from "gsap";
 const CoreValuesCommitments = () => {
   const [activeID, setActiveID] = useState(null);
@@ -84,7 +84,7 @@ const CoreValuesCommitments = () => {
 
   return (
     <>
-      <div className="core-values-commitment flex justify-center md:p-10 p-4 bg-gray-950 font-spaceGrotesk">
+      <div className="core-values-commitment flex justify-center md:p-10 p-4 bg-primary font-spaceGrotesk">
         <div className="accrordion md:w-[70%] w-full flex flex-col gap-4">
           <h1 className="text-4xl text-gray-100 font-bold mb-4">
             Our Core Values and Commitments
@@ -92,7 +92,7 @@ const CoreValuesCommitments = () => {
           {additionalContent.map((accord) => (
             <div
               key={accord.id}
-              className={`bg-[rgba(255,255,255,.1)] rounded-md ring-1 ring-gray-600 hover:ring-2 hover:ring-gray-500 ${
+              className={`bg-[rgba(255,255,255,.1)] rounded-md ring-1 ring-primary hover:ring-2 hover:ring-secondary ${
                 activeID === accord.id ? "active:" : ""
               }`}
             >
@@ -100,10 +100,10 @@ const CoreValuesCommitments = () => {
                 onClick={() => handleAccordion(accord.id)}
                 className="heading cursor-pointer py-2 px-4  flex justify-between items-center"
               >
-                <h2 className="text-gray-200 font-bold">{accord.heading}</h2>
+                <h2 className="text-white font-bold">{accord.heading}</h2>
                 <span>
                   <BiSolidCaretDownCircle
-                    className={`text-xl text-gray-50 transition-all ease-linear duration-150 ${
+                    className={`text-xl text-white transition-all ease-linear duration-150 ${
                       activeID === accord.id ? "rotate-180" : "rotate-0"
                     }`}
                   />
@@ -125,16 +125,16 @@ const CoreValuesCommitments = () => {
                   }}
                 >
                   <div className="p-4 text-gray-200">
-                    <p className="text-gray-300 text-lg mb-4">
+                    <p className="text-gray-200 text-lg mb-4">
                       {accord.mainDescription}
                     </p>
                     <ul className="flex flex-col gap-2">
                       {accord.details.map((item, index) => (
                         <li
                           key={index}
-                          className="flex items-center gap-2 text-gray-400"
+                          className="flex items-center gap-2 text-gray-300"
                         >
-                          <IoCheckmarkCircleOutline size={20} />
+                          <IoCheckmarkCircleOutline className="" size={20} />
                           <span>{item}</span>
                         </li>
                       ))}

@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#da880a",
+        primary: "#815007",
+        secondary:"#d8880a"
       },
       fontFamily: {
         montserrat: ['"Montserrat"', "sans-serif"],
