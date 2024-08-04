@@ -14,10 +14,10 @@ const Navbar = () => {
   };
   return (
     <>
-      <nav className="flex gap-4 font-montserrat bg-white items-center md:px-8 px-2">
+      <nav className="flex gap-4 font-spaceGrotesk  bg-white items-center md:px-8 px-2">
         <h1 className="logo">
           <Link to={"/"}>
-            <img src={Logo} alt="" className=""/>
+            <img src={Logo} alt="" className="" />
           </Link>
         </h1>
         <ul className="text-gray-700 hidden md:flex gap-4 ml-6">
@@ -28,6 +28,10 @@ const Navbar = () => {
             <Link to={"/services"}>Services</Link>
           </li>
           <li>
+              <Link to={"/gallery"}>Gallery</Link>
+            </li>
+          <li>
+           
             <Link to={"/about"}>About</Link>
           </li>
           <li>

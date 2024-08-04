@@ -9,12 +9,16 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import store from "./state/store.js";
 import { Provider } from "react-redux";
 import ServiceOverview from "./components/ServiceOverview.jsx";
+import Services from "./components/Services.jsx";
+import Gallery from "./routes/Gallery.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     children: [
       { path: "/", element: <Home /> },
+      { path: "/services", element: <Services /> },
+      { path: "/gallery", element: <Gallery /> },
       { path: "/contact", element: <Contact /> },
       { path: "/about", element: <About /> },
       { path: "/services/:name", element: <ServiceOverview /> },
