@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 const Gallery = () => {
   const [currentImg, setCurrentImg] = useState();
   const [activeId, setActiveId] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [enabelSlide, setEnabelSlide] = useState(false);
+  const ref = useRef();
   const galleryImages = [
     {
       id: 1,
@@ -90,9 +93,18 @@ const Gallery = () => {
       setCurrentIndex(0);
     }
   };
+
+  useGSAP(() => {
+    const tl = gsap.timeline();
+    tl.from(".main-img", { x: -50, opacity: 0, stagger: 0.2 }).to(
+      ".main-img",
+      { x: 0, opacity: 1, stagger: 0.2 }
+    );
+  }, [currentIndex]);
+
   return (
     <>
-      <div className={`gallery p-8 relative`}>
+      <div className={`gallery p-8 relative`} ref={ref}>
         <div
           className={`images grid md:grid-cols-4 grid-cols-1 gap-4 relative`}
         >
@@ -117,7 +129,7 @@ const Gallery = () => {
             </span>
             <div className="w-full md:h-[80%] h-[100vh] relative flex items-center">
               <img
-                className={`md:h-full w-full h-[50%] object-cover object-center rounded-lg my-auto`}
+                className={`main-img md:h-full w-full h-[50%] object-cover object-center rounded-lg my-auto`}
                 src={galleryImages[currentIndex].img_url}
               />
               <div
