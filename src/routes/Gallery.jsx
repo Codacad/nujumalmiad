@@ -105,7 +105,7 @@ const Gallery = () => {
             />
           ))}
           <div
-            className={`images fixed z-10 top-0 p-16 bg-gray-950 left-0 w-full h-[100vh] transition-all duration-300 ease-out ${
+            className={`images fixed z-10 top-0 md:p-16 p-4 bg-gray-950 left-0 w-full md:h-[100vh] h-[60vh] transition-all duration-300 ease-out ${
               enabelSlide ? "scale-100 visible" : "scale-0 invisible"
             }`}
           >
