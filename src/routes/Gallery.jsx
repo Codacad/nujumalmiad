@@ -115,9 +115,9 @@ const Gallery = () => {
             >
               <IoCloseSharp className="text-gray-200 font-bold" size={30} />
             </span>
-            <div className="w-full md:h-[80%] h-[50vh] relative">
+            <div className="w-full md:h-[80%] h-[100vh] relative flex items-center">
               <img
-                className={`h-full w-full object-cover object-center rounded-lg my-auto`}
+                className={`md:h-full w-full h-[50%] object-cover object-center rounded-lg my-auto`}
                 src={galleryImages[currentIndex].img_url}
               />
               <div
