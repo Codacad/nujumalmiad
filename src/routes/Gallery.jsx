@@ -105,7 +105,7 @@ const Gallery = () => {
             />
           ))}
           <div
-            className={`images fixed z-10 top-0 md:p-16 p-4 bg-gray-950 left-0 w-full md:h-[100vh] h-[60vh] transition-all duration-300 ease-out ${
+            className={`images fixed z-10 top-0 md:p-16 p-4 bg-gray-950 left-0 w-full h-[100vh] transition-all duration-300 ease-out ${
               enabelSlide ? "scale-100 visible" : "scale-0 invisible"
             }`}
           >
@@ -115,9 +115,9 @@ const Gallery = () => {
             >
               <IoCloseSharp className="text-gray-200 font-bold" size={30} />
             </span>
-            <div className="w-full h-[80%] relative">
+            <div className="w-full md:h-[80%] h-[50vh] relative">
               <img
-                className={`h-full w-full object-cover object-center rounded-lg`}
+                className={`h-full w-full object-cover object-center rounded-lg my-auto`}
                 src={galleryImages[currentIndex].img_url}
               />
               <div
