@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { showSpinner, hideSpinner } from "./state/slices/spinerSlice";
 import Spinner from "./components/Spinner";
 import { useEffect } from "react";
+import Footer from "./components/Footer";
+
 function App() {
   const { loading } = useSelector((state) => state.spiner);
   const location = useLocation();
@@ -24,6 +26,7 @@ function App() {
       <Navbar />
       <Outlet />
       <Sidenav />
+     <Footer />
     </>
   );
 }
