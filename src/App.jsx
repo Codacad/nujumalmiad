@@ -6,11 +6,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { showSpinner, hideSpinner } from "./state/slices/spinerSlice";
 import Spinner from "./components/Spinner";
 import { useEffect } from "react";
-import Footer from './components/Footer'
+import Footer from "./components/Footer";
 function App() {
   const { loading } = useSelector((state) => state.spiner);
   const location = useLocation();
-  console.log(location.pathname)
+  console.log(location.pathname);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(showSpinner());
@@ -18,7 +18,6 @@ function App() {
     setTimeout(() => {
       dispatch(hideSpinner());
     }, 1000);
-
 
     window.scrollTo(0, 0);
   }, [location.pathname, dispatch]);

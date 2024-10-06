@@ -3,6 +3,7 @@ import Logo from "/images/logo.svg";
 import { Link } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
+import { FaFile } from "react-icons/fa";
 import { setToggle } from "../state/slices/sidenavSlice";
 const Sidenav = () => {
   const { toggle } = useSelector((state) => state.sidenav);
@@ -36,6 +37,62 @@ const Sidenav = () => {
               />
             </span>
           </header>
+          <div className="nav-list py-8">
+            <ul className="text-gray-700 flex flex-col gap-2 ml-6">
+              <li className="flex">
+                <Link
+                  className="hover:bg-gray-100 p-2 rounded-md w-full"
+                  to={"/"}
+                >
+                  Home
+                </Link>
+              </li>
+              <li className="flex">
+                <Link
+                  className="hover:bg-gray-100 p-2 rounded-md w-full"
+                  to={"/services"}
+                >
+                  Services
+                </Link>
+              </li>
+              <li className="flex">
+                <Link
+                  className="hover:bg-gray-100 p-2 rounded-md w-full"
+                  to={"/gallery"}
+                >
+                  Gallery
+                </Link>
+              </li>
+              <li className="flex">
+                <Link
+                  className="hover:bg-gray-100 p-2 rounded-md w-full"
+                  to={"/about"}
+                >
+                  About
+                </Link>
+              </li>
+              <li className="flex">
+                <Link
+                  className="hover:bg-gray-100 p-2 rounded-md w-full"
+                  to={"/contact"}
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <button className="mt-8 w-[130px] bg-gray-200 text-sm font-[600] p-2 rounded-md flex gap-1 items-center text-gray-950">
+                  <FaFile />
+                  <span>Request Quote</span>
+                </button>
+              </li>
+            </ul>
+
+            {/* Contact for more details */}
+
+            <div className="contact-for-more">
+              
+            </div>
+          </div>
         </nav>
       </div>
     </>
