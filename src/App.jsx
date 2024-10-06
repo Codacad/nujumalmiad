@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 function App() {
   const { loading } = useSelector((state) => state.spiner);
   const location = useLocation();
+  console.log(location.pathname)
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(showSpinner());
@@ -17,6 +18,9 @@ function App() {
     setTimeout(() => {
       dispatch(hideSpinner());
     }, 1000);
+
+
+    window.scrollTo(0, 0);
   }, [location.pathname, dispatch]);
   return (
     <>

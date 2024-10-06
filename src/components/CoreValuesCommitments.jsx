@@ -134,7 +134,7 @@ const CoreValuesCommitments = () => {
                           key={index}
                           className="flex items-center gap-2 text-gray-500"
                         >
-                          <IoCheckmarkCircleOutline className="" size={20} />
+                          <IoCheckmarkCircleOutline className="text-primary" size={20} />
                           <span>{item}</span>
                         </li>
                       ))}
