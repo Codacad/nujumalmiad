@@ -245,7 +245,7 @@ const Contact = () => {
       <div className="contact-us bg-gray-100 relative">
         <header className="md:min-h-[50vh] z-10 text-center h-[40vh] relative flex justify-center items-center">
           <div
-            className={`-z-10 bg-[url('/images/contact-us.jpg')] absolute w-full bg-cover bg-center bg-no-repeat md:h-[50vh] h-[40vh] object-center`}
+            className={`-z-10 bg-[url('/images/contact-us.jpg')] bg-fixed absolute w-full bg-cover bg-center bg-no-repeat md:h-[50vh] h-[40vh] object-center`}
           >
             <div className="w-full h-full bg-[rgba(0,0,0,.7)]"></div>
           </div>
@@ -269,14 +269,14 @@ const Contact = () => {
         <div className="contact flex flex-col justify-center">
           <div className="contact-information md:my-16 md:w-[80%] md:p-6 max-md:py-6 mx-auto flex flex-col justify-center items-center">
             <div className="heading my-8 lg:mb-16">
-              <h1 className="md:text-4xl text-3xl font-[500] heading-after">
+              <h1 className="md:text-4xl text-3xl text-primary font-[500] heading-after">
                 Contact Information
               </h1>
             </div>
             <div className="information grid md:grid-cols-3 grid-col-1 justify-center md:gap-6 gap-4 p-4 relative z-0">
               <div className="mailing-address transition-all duration-150 ease-linear hover:bg-black group relative shadow-primaryShadow md:p-8 p-4 flex gap-4 flex-col items-center text-center bg-white rounded-3xl">
                 <span>
-                  <MdOutlineAddLocationAlt className="text-gray-950 text-6xl group-hover:text-white" />
+                  <MdOutlineAddLocationAlt className="text-primary text-6xl group-hover:text-white" />
                 </span>
                 <h2 className="text-balance font-bold text-xl text-gray-950 font-montserrat group-hover:text-white">
                   Mailing Address
@@ -288,23 +288,29 @@ const Contact = () => {
               </div>
               <div className="email-info relative transition-all duration-150 ease-linear hover:bg-black group shadow-primaryShadow md:p-8 p-4 flex gap-4 flex-col items-center text-center bg-white rounded-3xl">
                 <span>
-                  <MdAttachEmail className="text-gray-950 text-6xl group-hover:text-white" />
+                  <MdAttachEmail className="text-primary text-6xl group-hover:text-white" />
                 </span>
                 <h2 className="text-balance font-bold text-xl group-hover:text-white text-gray-950 font-montserrat">
                   Email Info
                 </h2>
-                <p className="text-gray-500 font-montserrat">
+                <p className="text-gray-500 font-montserrat flex flex-col gap-1">
                   <Link
                     className="hover:underline group-hover:text-gray-200"
                     to={"mailto:info@nujumalmiad.com"}
                   >
                     info@nujumalmiad.com
                   </Link>
+                  <Link
+                    className="hover:underline group-hover:text-gray-200"
+                    to={"mailto:admin@nujumalmiad.com"}
+                  >
+                    admin@nujumalmiad.com
+                  </Link>
                 </p>
               </div>
               <div className="phone-number relative group transition-all duration-150 ease-linear hover:bg-black shadow-primaryShadow md:p-8 p-4 flex gap-4 flex-col items-center text-center bg-white rounded-3xl">
                 <span>
-                  <MdOutlinePhoneIphone className="text-gray-950 text-6xl group-hover:text-white" />
+                  <MdOutlinePhoneIphone className="text-primary text-6xl group-hover:text-white" />
                 </span>
                 <h2 className="text-balance font-bold text-xl text-gray-950 font-montserrat group-hover:text-white">
                   Phone Number
@@ -322,7 +328,7 @@ const Contact = () => {
           </div>
           <div className="contact-form md:py-16 flex flex-col items-center bg-white md:p-6 max-md:py-6 font-montserrat">
             <div className="heading">
-              <h1 className="md:text-4xl text-3xl font-[500] text-gray-950 my-8 lg:mb-16 heading-after">
+              <h1 className="md:text-4xl text-3xl font-[500] text-primary my-8 lg:mb-16 heading-after">
                 Send us a message
               </h1>
             </div>
@@ -442,11 +448,14 @@ const Contact = () => {
                 ) : (
                   ""
                 )}
-                <button className="w-28 bg-gray-950 p-1 text-white rounded-sm">
+                <button
+                  disabled={responseMessage == "loading" ? true : false}
+                  className={`w-28 p-1 rounded-sm ${responseMessage == 'loading' ? "bg-gray-400 opacity-50" : "bg-primary text-white"}`}
+                >
                   {responseMessage == "loading" ? (
-                    <div className="flex justify-center gap-2 items-center bg-[rgba(0,0,0,.5)]">
+                    <div className="flex justify-center gap-2 items-center">
                       <div className="animate-spin w-4 h-4 border-2 border-[rgba(255,255,255,.5)] border-t-2 border-t-black rounded-full"></div>
-                      <span className="text-gray-500">Sending...</span>
+                      <span className="text-gray-200">Sending...</span>
                     </div>
                   ) : (
                     <span>Submit</span>

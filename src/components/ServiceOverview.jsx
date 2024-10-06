@@ -12,7 +12,7 @@ const ServiceOverview = () => {
       <div className="service-overview">
         <header className="md:min-h-[50vh] text-center h-[40vh] relative flex justify-center items-center">
           <div
-            className={`-z-10 bg-[url('${service?.image}')] absolute w-full bg-cover bg-center bg-no-repeat md:h-[50vh] h-[40vh] object-center`}
+            className={`-z-10 bg-[url('${service?.image}')] bg-fixed absolute w-full bg-cover bg-center bg-no-repeat md:h-[50vh] h-[40vh] object-center`}
           >
             <div className="w-full h-full bg-[rgba(0,0,0,.7)]"></div>
           </div>
@@ -21,13 +21,13 @@ const ServiceOverview = () => {
               {service?.name}
             </h1>
             <div className="navigation flex justify-center items-center">
-              <Link to={"/"} className="text-gray-300">
+              <Link to={"/"} className="text-gray-300 hover:text-gray-400">
                 Home
               </Link>
               <span className="text-white">
                 <RxCaretRight className="text-gray-300 mt-[2px]" />
               </span>
-              <Link to={`/services`} className="text-gray-300">
+              <Link to={`/services`} className="text-gray-300 hover:text-gray-400">
                 Services
               </Link>
               <span className="text-white">

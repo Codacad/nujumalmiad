@@ -11,7 +11,6 @@ import { Link } from "react-router-dom";
 import WhyChooseUs from "../components/WhyChooseUs";
 import Services from "../components/Services";
 import CoreValuesCommitments from "../components/CoreValuesCommitments";
-
 const Home = () => {
   const [windowWidth, setWindowWidth] = useState({
     width: window.innerWidth,
@@ -28,7 +27,6 @@ const Home = () => {
     // Cleanup event listener on component unmount
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  console.log(windowWidth.width);
   return (
     <>
       <Swiper
@@ -63,7 +61,7 @@ const Home = () => {
               <div className="buttons flex gap-2">
                 <Link
                   to={"/services/Contracting Services"}
-                  className="bg-primary transition-all duration-100 ease-linear hover:bg-transparent hover:ring-1 hover:ring-primary hover:text-primary rounded-md shadow-md text-sm text-white px-3 py-2"
+                  className="bg-secondary transition-all duration-100 ease-linear hover:bg-transparent hover:ring-1 hover:ring-primary hover:text-primary rounded-md shadow-md text-sm text-white px-3 py-2"
                 >
                   Learn More
                 </Link>
@@ -94,7 +92,7 @@ const Home = () => {
               <div className="buttons flex gap-2">
                 <Link
                   to={"/services/Manpower Supply"}
-                  className="bg-primary transition-all duration-100 ease-linear hover:bg-transparent hover:ring-1 hover:ring-primary hover:text-primary rounded-md shadow-md text-sm text-white px-3 py-2"
+                  className="bg-secondary transition-all duration-100 ease-linear hover:bg-transparent hover:ring-1 hover:ring-primary hover:text-primary rounded-md shadow-md text-sm text-white px-3 py-2"
                 >
                   Learn More
                 </Link>
@@ -125,7 +123,7 @@ const Home = () => {
               <div className="buttons flex gap-2">
                 <Link
                   to={"/services/Civil Construction & Maintenance"}
-                  className="bg-primary transition-all duration-100 ease-linear hover:bg-transparent hover:ring-1 hover:ring-primary hover:text-primary rounded-md shadow-md text-sm text-white px-3 py-2"
+                  className="bg-secondary transition-all duration-100 ease-linear hover:bg-transparent hover:ring-1 hover:ring-primary hover:text-primary rounded-md shadow-md text-sm text-white px-3 py-2"
                 >
                   Learn More
                 </Link>
@@ -156,7 +154,7 @@ const Home = () => {
               <div className="buttons flex gap-2">
                 <Link
                   to={"/services/Mechanical Maintenance"}
-                  className="bg-primary transition-all duration-100 ease-linear hover:bg-transparent hover:ring-1 hover:ring-primary hover:text-primary rounded-md shadow-md text-sm text-white px-3 py-2"
+                  className="bg-secondary transition-all duration-100 ease-linear hover:bg-transparent hover:ring-1 hover:ring-primary hover:text-primary rounded-md shadow-md text-sm text-white px-3 py-2"
                 >
                   Learn More
                 </Link>
@@ -187,7 +185,7 @@ const Home = () => {
               <div className="buttons flex gap-2">
                 <Link
                   to={"/services/Electrical Maintenance"}
-                  className="bg-primary transition-all duration-100 ease-linear hover:bg-transparent hover:ring-1 hover:ring-primary hover:text-primary rounded-md shadow-md text-sm text-white px-3 py-2"
+                  className="bg-secondary transition-all duration-100 ease-linear hover:bg-transparent hover:ring-1 hover:ring-primary hover:text-primary rounded-md shadow-md text-sm text-white px-3 py-2"
                 >
                   Learn More
                 </Link>

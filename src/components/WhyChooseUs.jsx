@@ -24,7 +24,7 @@ const WhyChooseUs = () => {
     <>
       <section className="why-choose-us bg-gray-50">
         <div className="container scroll-animation flex flex-col">
-          <h2 className="text-center flex justify-center items-center gap-3 flex-col md:my-8 md:text-4xl max-md:mt-8 text-2xl mb-6 font-bold text-gray-950 font-montserrat after:contents-[''] after:block after:bottom-0 after:left-0 after:w-32 after:h-1 after:rounded-sm after:bg-primary">
+          <h2 className="text-center flex justify-center items-center gap-3 flex-col md:my-8 md:text-4xl max-md:mt-8 text-2xl mb-6 font-bold text-primary font-montserrat after:contents-[''] after:block after:bottom-0 after:left-0 after:w-32 after:h-1 after:rounded-sm after:bg-primary">
             Why Choose Us
           </h2>
           <Swiper
@@ -50,7 +50,7 @@ const WhyChooseUs = () => {
                     <div className="img w-32 h-32">
                       <img className="" src={slide.imgPath} alt="" />
                     </div>
-                    <h3 className="text-2xl text-gray-800 font-bold">
+                    <h3 className="text-2xl text-primary font-bold">
                       {slide.title}
                     </h3>
                     <p className="text-gray-600">{slide.description}</p>
@@ -62,12 +62,12 @@ const WhyChooseUs = () => {
           <div className="benefits bg-white relative w-full z-0 flex flex-col items-center gap-4 mx-auto p-4 my-4">
             <div className="content  md:w-[80%] md:grid grid-cols-2 flex flex-col gap-4">
               <ul className="flex flex-col gap-4 justify-center md:text-md text-sm font-roboto">
-                <h3 className="md:text-4xl text-2xl text-gray-950 font-bold mb-4 flex flex-col after:contents-[''] after:block after:bottom-0 after:left-0 after:w-24 after:h-1 after:rounded-sm after:bg-primary">
+                <h3 className="md:text-4xl text-2xl text-primary font-bold mb-4 flex flex-col after:contents-[''] after:block after:bottom-0 after:left-0 after:w-24 after:h-1 after:rounded-sm after:bg-primary">
                   Benefits to Clients
                 </h3>
                 <li className="flex items-center gap-2 md:text-xl">
                   <span>
-                    <FaCircleCheck className="text-primary" />
+                    <FaCircleCheck className="text-secondary" />
                   </span>
                   <span>
                     Single-point accountability for streamlined project
@@ -76,7 +76,7 @@ const WhyChooseUs = () => {
                 </li>
                 <li className="flex items-center gap-2 md:text-xl">
                   <span>
-                    <FaCircleCheck className="text-primary" />
+                    <FaCircleCheck className="text-secondary" />
                   </span>
                   <span>
                     Cost efficiency through optimized resource management.
@@ -84,7 +84,7 @@ const WhyChooseUs = () => {
                 </li>
                 <li className="flex items-center gap-2 md:text-xl">
                   <span>
-                    <FaCircleCheck className="text-primary" />
+                    <FaCircleCheck className="text-secondary" />
                   </span>
                   <span>
                     Reliable support from project inception to completion.
@@ -92,7 +92,7 @@ const WhyChooseUs = () => {
                 </li>
                 <li className="flex items-center gap-2 md:text-xl">
                   <span>
-                    <FaCircleCheck className="text-primary" />
+                    <FaCircleCheck className="text-secondary" />
                   </span>
                   <span>
                     Commitment to safety and adherence to industry standards.
@@ -100,7 +100,7 @@ const WhyChooseUs = () => {
                 </li>
                 <li className="flex items-center gap-2 md:text-xl">
                   <span>
-                    <FaCircleCheck className="text-primary" />
+                    <FaCircleCheck className="text-secondary" />
                   </span>
                   <span>
                     Access to skilled manpower with specialized expertise.
@@ -108,7 +108,7 @@ const WhyChooseUs = () => {
                 </li>
                 <li className="flex items-center gap-2 md:text-xl">
                   <span>
-                    <FaCircleCheck className="text-primary" />
+                    <FaCircleCheck className="text-secondary" />
                   </span>
                   <span>
                     Enhanced project outcomes through tailored maintenance
@@ -117,7 +117,7 @@ const WhyChooseUs = () => {
                 </li>
                 <li className="flex items-center gap-2 md:text-xl">
                   <span>
-                    <FaCircleCheck className="text-primary" />
+                    <FaCircleCheck className="text-secondary" />
                   </span>
                   <span>
                     Minimized downtime and increased operational efficiency.

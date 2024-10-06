@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "/images/Logo200x70.svg";
+import Logo from "/images/logo.svg";
 import { Link } from "react-router-dom";
 import { IoCloseSharp } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
@@ -16,13 +16,11 @@ const Sidenav = () => {
     <>
       <div
         className={`sidenav fixed top-0 ${
-          !toggle
-            ? "-right-[100%]"
-            : "right-0"
+          !toggle ? "-right-[100%]" : "right-0"
         } w-full min-h-screen z-20 bg-[rgba(0,0,0,.5)]`}
       >
         <nav
-          className={`w-[400px] min-h-full p-4 bg-gray-100 absolute right-0 top-0`}
+          className={`w-[400px] min-h-full p-4 bg-white absolute right-0 top-0`}
         >
           <header className="flex justify-between items-start border-b border-b-gray-200">
             <Link to={"/"}>
