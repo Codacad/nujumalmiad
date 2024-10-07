@@ -10,7 +10,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const handleSidenavTogle = () => {
     dispatch(setToggle());
-    console.log(toggle);
+
   };
   return (
     <>

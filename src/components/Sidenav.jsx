@@ -10,7 +10,6 @@ const Sidenav = () => {
   const dispatch = useDispatch();
   const handleSidenavTogle = () => {
     dispatch(setToggle());
-    console.log(toggle);
   };
 
   return (
@@ -41,6 +40,7 @@ const Sidenav = () => {
             <ul className="text-gray-700 flex flex-col gap-2 ml-6">
               <li className="flex">
                 <Link
+                 onClick={handleSidenavTogle}
                   className="hover:bg-gray-100 p-2 rounded-md w-full"
                   to={"/"}
                 >
@@ -49,6 +49,7 @@ const Sidenav = () => {
               </li>
               <li className="flex">
                 <Link
+                 onClick={handleSidenavTogle}
                   className="hover:bg-gray-100 p-2 rounded-md w-full"
                   to={"/services"}
                 >
@@ -57,6 +58,7 @@ const Sidenav = () => {
               </li>
               <li className="flex">
                 <Link
+                 onClick={handleSidenavTogle}
                   className="hover:bg-gray-100 p-2 rounded-md w-full"
                   to={"/gallery"}
                 >
@@ -65,6 +67,7 @@ const Sidenav = () => {
               </li>
               <li className="flex">
                 <Link
+                 onClick={handleSidenavTogle}
                   className="hover:bg-gray-100 p-2 rounded-md w-full"
                   to={"/about"}
                 >
@@ -73,6 +76,7 @@ const Sidenav = () => {
               </li>
               <li className="flex">
                 <Link
+                 onClick={handleSidenavTogle}
                   className="hover:bg-gray-100 p-2 rounded-md w-full"
                   to={"/contact"}
                 >
@@ -80,7 +84,7 @@ const Sidenav = () => {
                 </Link>
               </li>
               <li>
-                <button className="mt-8 w-[130px] bg-gray-200 text-sm font-[600] p-2 rounded-md flex gap-1 items-center text-gray-950">
+                <button  className="mt-8 w-[130px] bg-gray-200 text-sm font-[600] p-2 rounded-md flex gap-1 items-center text-gray-950">
                   <FaFile />
                   <span>Request Quote</span>
                 </button>
