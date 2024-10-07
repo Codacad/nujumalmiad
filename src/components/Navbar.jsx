@@ -3,14 +3,19 @@ import { Link } from "react-router-dom";
 import Logo from "/images/logo.svg";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { setToggle } from "../state/slices/sidenavSlice";
+import { MdHome } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { RiMenu3Line } from "react-icons/ri";
+import { FaServicestack } from "react-icons/fa";
+import { MdPhotoSizeSelectActual } from "react-icons/md";
+import { MdOutlineRoundaboutRight } from "react-icons/md";
+import { MdContactEmergency } from "react-icons/md";
+import { FaFile } from "react-icons/fa";
 const Navbar = () => {
   const { toggle } = useSelector((state) => state.sidenav);
   const dispatch = useDispatch();
   const handleSidenavTogle = () => {
     dispatch(setToggle());
-
   };
   return (
     <>
@@ -22,20 +27,34 @@ const Navbar = () => {
         </h1>
         <ul className="text-gray-700 hidden md:flex gap-4 ml-6">
           <li>
-            <Link to={"/"}>Home</Link>
+            <Link className="flex items-center gap-1" to={"/"}>
+              <MdHome />
+              <span>Home</span>
+            </Link>
           </li>
           <li>
-            <Link to={"/services"}>Services</Link>
+            <Link className="flex items-center gap-1" to={"/services"}>
+              {" "}
+              <FaServicestack /> <span>Services</span>
+            </Link>
           </li>
           <li>
-              <Link to={"/gallery"}>Gallery</Link>
-            </li>
-          <li>
-           
-            <Link to={"/about"}>About</Link>
+            <Link className="flex items-center gap-1" to={"/gallery"}>
+              {" "}
+              <MdPhotoSizeSelectActual /> <span>Gallery</span>
+            </Link>
           </li>
           <li>
-            <Link to={"/contact"}>Contact</Link>
+            <Link className="flex items-center gap-1" to={"/about"}>
+              {" "}
+              <MdOutlineRoundaboutRight /> <span>About</span>
+            </Link>
+          </li>
+          <li>
+            <Link className="flex items-center gap-1" to={"/contact"}>
+              {" "}
+              <MdContactEmergency /> <span>Contact</span>
+            </Link>
           </li>
         </ul>
 
@@ -47,8 +66,9 @@ const Navbar = () => {
             <FaLinkedin size={20} />
           </span>
         </div>
-        <button className="ml-auto w-[130px] hidden md:block text-sm bg-primary p-2 rounded-md shadow-md text-white">
-          Request Quote
+        <button className="ml-auto w-[140px] hidden md:flex items-center gap-1 text-sm bg-primary p-2 rounded-md shadow-md text-white">
+          <FaFile />
+          <span>Request Quote</span>
         </button>
         <div className="hamburger block max-md:ml-auto">
           <span onClick={handleSidenavTogle} className="cursor-pointer">
